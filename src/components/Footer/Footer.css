@@ -1,0 +1,40 @@
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+footer {
+    height: 20vh;
+    width: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerDiv{
+    text-align: center;
+}
+
+.footerDiv h1{
+    color: #4cff4c;
+
+}
+@media screen and (max-width: 450px) {
+    footer {
+        position: relative;
+        /* top: 200px */
+    }
+
+    .footerDiv h1{
+        font-size: 23px;
+    }
+}
+
+
+@media (min-width : 480px) and (max-width: 1024px) {
+    footer {
+        position: relative;
+        top: 60px
+    }
+}

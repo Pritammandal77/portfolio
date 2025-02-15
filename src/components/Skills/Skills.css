@@ -1,0 +1,425 @@
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+.skillsContainer {
+    height: auto;
+    width: 100vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 70px 100px 30px 100px;
+    box-sizing: border-box;
+}
+
+.skillsHead {
+    font-size: 70px;
+    font-weight: 550;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px 60px 0px;
+    color: #0ac300;
+}
+
+.skillsDiv {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+}
+
+.languages-Frameworks {
+    height: 80vh;
+    width: 50%;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+
+}
+
+.languagesDiv {
+    display: flex;
+    flex-direction: column;
+    height: 38vh;
+    background-color: #171717;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 30px;
+    justify-content: space-evenly;
+    border-radius: 20px;
+}
+
+.languagesLogoDiv {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.individualskill {
+    background-color: #070707;
+    height: 170px;
+    width: 20%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 10px;
+    cursor: pointer;
+
+}
+
+.individualskill:hover {
+    scale: 1.05;
+    background-color: #0e0e0e;
+}
+
+.individualskill>p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.frameworksDiv {
+    display: flex;
+    flex-direction: column;
+    height: 38vh;
+    background-color: #1f1f1f;
+}
+
+
+.skillslogoimg {
+    width: 80px;
+}
+
+
+.frameworksDiv {
+    display: flex;
+    flex-direction: column;
+    height: 38vh;
+    background-color: #171717;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 30px;
+    justify-content: space-evenly;
+    border-radius: 20px;
+}
+
+.frameworksLogoDiv {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+.otherSkiilsDiv {
+    width: 48vw;
+    height: 80vh;
+    background-color: #171717;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.otherSkillsBox {
+    width: 90%;
+    height: 70vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+}
+
+.otherSkiilsDivPart1 {
+    width: 47%;
+    height: 100%;
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.otherSkiilsDivPart2 {
+    width: 47%;
+    height: 100%;
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.individualOtherskill {
+    background-color: #070707;
+    height: 150px;
+    width: 45%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.individualOtherskill>p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.githubLogo {
+    filter: invert(100%);
+}
+
+
+@media screen and (max-width: 450px) {
+    body {
+        height: auto;
+        width: 100vw;
+    }
+
+    .skillsContainer {
+        padding-top: 80px;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: #070707;
+    }
+
+    .skillsDiv {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .skillsHead {
+        font-size: 50px;
+    }
+
+    .skillsDiv {
+        height: auto;
+    }
+
+
+    .languages-Frameworks {
+        height: auto;
+        width: 94vw;
+        padding: 0px 0px;
+    }
+
+
+    .languagesDiv {
+        height: 30vh;
+    }
+
+    .languagesLogoDiv {
+        width: 94vw;
+    }
+
+
+    .individualskill {
+        height: 150px;
+        width: 20vw;
+    }
+
+    .skillslogoimg {
+        width: 60px;
+    }
+
+    .individualskill>p {
+        font-size: 17px;
+    }
+
+
+    .frameworksDiv {
+        height: auto;
+    }
+
+    .frameworksLogoDiv {
+        width: 94vw;
+
+    }
+
+    .skillslogoimg {
+        width: 60px;
+    }
+
+    .otherSkiilsDiv {
+        width: 94vw;
+
+    }
+
+    .individualOtherskill {
+        height: 150px;
+        width: 30vw;
+    }
+
+    .individualOtherskill>p {
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+
+    .githubLogo {
+        filter: invert(100%);
+    }
+
+
+}
+
+/* only for Iphone SE */
+@media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+
+    .languagesDiv {
+        height: 40vh;
+    }
+
+    .frameworksDiv {
+        height: 45vh;
+
+    }
+
+
+    .individualskill {
+        height: 25vh;
+        width: 22vw;
+    }
+
+
+    .individualOtherskill {
+        height: 18vh;
+        width: 30vw;
+    }
+
+    .individualOtherskill>p {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .otherSkillsImg {
+        width: 40px;
+    }
+
+
+}
+
+
+@media (min-width : 480px) and (max-width: 1336px) {
+    body {
+        height: auto;
+        width: 100vw;
+    }
+
+    .skillsContainer {
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-top: 80px;
+    }
+
+    .skillsDiv {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .skillsDiv {
+        height: auto;
+    }
+
+
+    .languages-Frameworks {
+        height: auto;
+        width: 94vw;
+        padding: 0px 0px;
+    }
+
+
+    .languagesDiv {
+        height: 25vh;
+    }
+
+    .languagesLogoDiv {
+        width: 94vw;
+    }
+
+
+
+    .individualskill {
+        height: 15vh;
+        width: 20vw;
+    }
+
+    .skillslogoimg {
+        width: 90px;
+    }
+
+    .individualskill>p {
+        font-size: 24px;
+    }
+
+
+    .frameworksDiv {
+        height: 25vh;
+    }
+
+    .frameworksLogoDiv {
+        width: 94vw;
+
+    }
+
+    .skillslogoimg {
+        width: 60px;
+    }
+
+    .otherSkiilsDiv {
+        width: 94vw;
+    }
+
+    .individualOtherskill {
+        height: 15vh;
+        width: 25vw;
+    }
+
+    .individualOtherskill>p {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+
+    .githubLogo {
+        filter: invert(100%);
+    }
+
+}

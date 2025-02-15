@@ -1,0 +1,148 @@
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 2;
+    max-width: 100vw;
+}
+
+.navBar {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 0px 30px;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+}
+
+.part1 {
+    font-size: 22px;
+}
+
+.part1 p {
+    font-size: 25px;
+    font-weight: 600;
+    color: #4cff4c;
+
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    gap: 60px;
+}
+
+li {
+    cursor: pointer;
+}
+
+.diffPages {
+    text-decoration: none;
+    color: white;
+}
+
+.iconToOpenHamburger {
+    display: none;
+}
+
+.HamburgerDiv {
+    align-self: flex-start;
+    display: none;
+    transition: opacity 1s ease;
+}
+
+#xMark {
+    align-self: flex-end;
+    font-size: 30px;
+    position: relative;
+    bottom: 10px;
+}
+
+#menuIcon {
+    font-size: 30px;
+
+}
+
+.Hamburgerul {
+    flex-direction: column;
+    align-items: left;
+    height: 100vh;
+    width: 50vw;
+    background-color: #1b1b1b;
+    position: absolute;
+    right: 0px;
+    padding: 30px;
+    z-index: 100;
+}
+
+.Hamburgerli {
+    text-decoration: none;
+    font-size: 22px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    #xMark {
+        align-self: flex-end;
+        font-size: 30px;
+        position: relative;
+        bottom: 23px;
+    }
+
+    .navBar {
+        height: 6vh;
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+        padding: 0px 30px;
+        align-items: center;
+        font-size: 24px;
+        color: white;
+    }
+
+
+    .iconToOpenHamburger {
+        display: flex;
+    }
+
+    .pcNav {
+        display: none;
+    }
+
+    .HamburgerDiv {
+        display: none;
+    }
+
+}
+
+@media (min-width: 1024px) and (max-width: 1336px) {
+    .navBar {
+        height: 6vh;
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+        padding: 0px 30px;
+        align-items: center;
+        font-size: 24px;
+        color: white;
+    }
+
+    .navBar {
+        font-size: 28px;
+    }
+}

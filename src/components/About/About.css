@@ -1,0 +1,137 @@
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.fullAboutPage {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10vh 50px 50px 50px;
+}
+
+.aboutPageImg {
+    height: 80vh;
+    width: 30vw;
+}
+
+.aboutPart1 {
+    width: 35vw;
+    height: 80vh;
+    
+}
+
+.aboutPart2 {
+    height: auto;
+    width: 50vw;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.aboutMe {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.aboutMe p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.aboutMe h1 {
+    font-size: 35px;
+    font-weight: 600;
+    color: #4cff4c;
+}
+
+.aboutPageSkills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.aboutPageSkills h1 {
+    font-size: 35px;
+    font-weight: 600;
+    color: #4cff4c;
+}
+
+.aboutPageSkills b {
+    color: #3efcff;
+}
+
+.aboutMe,
+.AboutSkillsDiv,
+.certificationsDiv {
+    line-height: 30px;
+}
+
+.aboutPageCertifications {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.aboutPageCertifications h1 {
+    font-size: 35px;
+    font-weight: 600;
+    color: #4cff4c;
+}
+
+.aboutPageCertifications b {
+    color: #3efcff;
+}
+
+@media screen and (max-width: 450px) {
+
+    .fullAboutPage {
+        padding: 80px 25px 100px 25px;
+        margin-top: 0px;
+    }
+
+    .aboutPart1 {
+        display: none;
+    }
+
+    .aboutPart2 {
+        height: auto;
+        width: auto;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .aboutMe {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .aboutMe p {
+        font-size: 18px;
+    }
+}
+
+
+@media (min-width : 480px) and (max-width: 1336px) {
+    .aboutPart1 {
+        display: none;
+    }
+
+    .aboutPart2 {
+        height: auto;
+        width: 100vw;
+        padding: 0px 0px 0px 0px;
+        display: flex;
+    }
+}
+
+@media (min-width : 760px) {
+    .fullAboutPage {
+        margin-top: 50px;
+    }
+}

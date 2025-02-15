@@ -1,0 +1,444 @@
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+.mainBodyContainer {
+  height: 100vh;
+  width: 100%;
+  color: white;
+  background-color: #0e0e0e;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0px 100px 0px 100px;
+  box-sizing: border-box;
+
+}
+
+.bodyContainer1 {
+  width: 60vw;
+  height: 40vh;
+}
+
+.bodyContainer2 {
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+}
+
+.myImg {
+  height: 60vh;
+  border-radius: 50%;
+}
+
+
+.myName {
+  font-size: 90px;
+  color: #4cff4c;
+  font-weight: 600;
+}
+
+
+.positionDiv {
+  display: flex;
+}
+
+.myRole {
+  font-size: 70px;
+  color: #00b9ce;
+}
+
+.myRole>pre {
+  font-weight: 600;
+}
+
+.IamA {
+  font-size: 70px;
+}
+
+.myRole {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.8s infinite;
+  color: #6e6e6e;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 10px;
+  border-radius: 5em;
+  width: 450px;
+  margin: 40px 0px 0px 0px;
+
+}
+
+.socialIcons {
+  display: flex;
+}
+
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px #00000027;
+  transition: 0.3s;
+}
+
+.social-button:hover {
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 6px 3px #00000027;
+}
+
+.social-buttons svg {
+  transition: 0.3s;
+  height: 20px;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.facebook svg {
+  fill: #f2f2f2;
+}
+
+.facebook:hover svg {
+  fill: #3b5998;
+}
+
+.github {
+  background-color: #333;
+}
+
+.github svg {
+  width: 25px;
+  height: 25px;
+  fill: #f2f2f2;
+}
+
+.github:hover svg {
+  fill: #333;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.linkedin svg {
+  fill: #f2f2f2;
+}
+
+.linkedin:hover svg {
+  fill: #0077b5;
+}
+
+.instagram {
+  background-color: #c13584;
+}
+
+.instagram svg {
+  fill: #f2f2f2;
+}
+
+.instagram:hover svg {
+  fill: #c13584;
+}
+
+
+
+
+.ui {
+  color: #4cf;
+  display: inline;
+}
+
+.button {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+  font-weight: 00;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: 600;
+  background-color: #2c2c2c;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  background: linear-gradient(144deg, #1e1e1e, 20%, #1e1e1e 50%, #1e1e1e);
+  transition: all 0.2s ease;
+  color: #fff;
+}
+
+.button:active {
+  transform: scale(0.96);
+}
+
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.button:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+    radial-gradient(circle, #535EFC 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #0EC8EE 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #0EC8EE 20%, transparent 20%),
+    radial-gradient(circle, #0EC8EE 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.button:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #535EFC 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #535EFC 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #535EFC 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+
+
+
+@media screen and (max-width: 450px) {
+  .mainBodyContainer {
+    flex-direction: column-reverse;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    top: 50px;
+    align-items: center;
+    padding: 0px 0px 120px 0px;
+    justify-content: space-evenly;
+    margin-top: 20px;
+  }
+
+  .bodyContainer1 {
+    width: 100vw;
+    height: auto;
+    text-align: center;
+  }
+
+  .myImg {
+    height: 30vh;
+  }
+
+  .hello {
+    font-size: 33px;
+  }
+
+  .myName {
+    font-size: 45px;
+    color: #4cff4c;
+    font-weight: 600;
+  }
+
+  .IamA {
+    font-size: 30px;
+  }
+
+  .social-buttons {
+
+    margin: 0px 0px 0px 0px;
+  
+  }
+  .myRole {
+    font-size: 40px;
+  }
+
+  .myRole>b {
+    color: #3efcff;
+    font-size: 40px;
+
+  }
+
+  .social-buttons {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .button {
+    border: 2px solid rgb(176, 176, 176);
+  }
+
+  .positionDiv {
+    height: 100px;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+}
+
+@media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+  .social-buttons {
+    margin: 0px 0px 0px 0px;
+
+  }
+
+  .mainBodyContainer {
+    margin: 0px 0px 100px 0px;
+  }
+}
+
+@media (min-width : 480px) and (max-width: 1336px) {
+  .mainBodyContainer {
+    flex-direction: column-reverse;
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    top: 80px;
+    align-items: center;
+    /* background-color: #2b2b2b; */
+    padding: 0px 0px 0px 0px;
+    justify-content: space-evenly;
+    margin-top: 20px;
+  }
+
+  .bodyContainer1 {
+    width: 100vw;
+    /* background-color: rgb(0, 114, 76); */
+    height: 40vh;
+    text-align: center;
+  }
+
+  .myImg {
+    height: 30vh;
+  }
+
+  .hello {
+    font-size: 33px;
+  }
+
+  .myName {
+    font-size: 55px;
+    color: #4cff4c;
+    font-weight: 600;
+  }
+
+  .IamA {
+    font-size: 40px;
+    /* background-color: #3efcff; */
+  }
+
+  .myRole {
+    font-size: 60px;
+  }
+
+  .myRole>b {
+    color: #3efcff;
+    font-size: 40px;
+
+  }
+
+  .social-buttons {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #0077b5; */
+    width: 100vw;
+  }
+
+  .button {
+    border: 2px solid rgb(176, 176, 176);
+  }
+
+  .positionDiv {
+    height: 120px;
+    flex-direction: column;
+    /* background-color: #0EC8EE; */
+    /* margin-top: 20px; */
+  }
+
+}
+
+
+

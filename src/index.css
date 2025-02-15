@@ -1,0 +1,26 @@
+body{
+    background-color: #0d0d0d;
+    scrollbar-color: black #f1f1f1; 
+    scrollbar-width: thin;
+    color: white;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 12px; /* Width of vertical scrollbar */
+    height: 12px; /* Height of horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #1b1b1b; /* Background color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: black; /* Color of the scrollbar handle (thumb) */
+    border-radius: 6px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #000000; /* Slightly lighter black when hovered */
+}

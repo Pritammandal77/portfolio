@@ -1,0 +1,270 @@
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.ContactContainer {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.contact-1 {
+    width: 40%;
+    height: 100vh;
+    padding: 100px 50px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+
+
+.contactHeading {
+    color: #4cff4c;
+    text-align: center;
+    font-size: 70px;
+    font-weight: 600;
+}
+
+.contactMeSvg {
+    height: 200px;
+}
+
+.contactSocialBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-2 {
+    width: 60%;
+    height: 100vh;
+    padding: 100px 0px 0px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.allFields {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-size: 20px;
+    color: #4cff4c;
+}
+
+.field {
+    width: 40vw;
+    height: 40px;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0px 10px;
+    font-size: 18px;
+}
+
+.field::placeholder {
+    color: #7d7d7d;
+}
+
+.textArea {
+    height: 250px;
+    resize: none;
+    padding: 10px 0px 0px 10px;
+
+}
+
+.submitButton {
+    min-height: 50px;
+    width: 150px;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 12px;
+    font-size: 18px;
+    color: #4cff4c;
+    border: 2px solid #4cff4c;
+    border-radius: 14px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+}
+
+.submitButton::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: #4cff4c;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.submitButton:hover::before {
+    scale: 3;
+}
+
+.submitButton:hover {
+    color: #212121;
+    scale: 1.1;
+    box-shadow: 0px 0px 20px #4cff4c;
+}
+
+.submitButton:active {
+    scale: 1;
+}
+
+.my-custom-class {
+    background-color: #2d2d2d;
+    color: white;
+    width: 80vw;
+}
+
+.my-custom-title-class {
+    color: #00d507;
+    font-size: 1.6rem;
+}
+
+.my-custom-icon-class {
+    color: #00d507;
+}
+
+.my-custom-confirm-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: black;
+}
+
+@media screen and (max-width: 450px) {
+    .ContactContainer {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        padding: 80px 0px 0px 0px;
+    }
+
+
+    .contact-1 {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .contactHeading {
+        font-size: 50px;
+
+    }
+
+    .field {
+        width: 80vw;
+        height: 40px;
+        background-color: rgb(26, 26, 26);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 0px 10px;
+        font-size: 18px;
+    }
+
+    .contact-2 {
+        width: 100%;
+        height: auto;
+        padding: 50px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .textArea {
+        height: 250px;
+        resize: none;
+        padding: 10px 0px 0px 10px;
+    }
+
+
+}
+
+@media (min-width : 480px) and (max-width: 1336px) {
+    .ContactContainer {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 100px;
+    }
+
+
+    .contact-1 {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .contactHeading {
+        font-size: 50px;
+
+    }
+
+    .field {
+        width: 80vw;
+        height: 40px;
+        background-color: rgb(26, 26, 26);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 0px 10px;
+        font-size: 18px;
+    }
+
+    .contact-2 {
+        width: 100%;
+        height: auto;
+        padding: 50px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .textArea {
+        height: 250px;
+        resize: none;
+        padding: 10px 0px 0px 10px;
+    }
+
+}
+
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) {
+
+    .ContactContainer {
+        margin-top: 200px;
+    }
+}
+
