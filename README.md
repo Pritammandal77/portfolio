@@ -17,5 +17,5 @@ Welcome to my **Portfolio Website**, showcasing my skills, projects, and experie
 - **Fast & SEO-Friendly** – Optimized for performance and discoverability
 - 
 ## 🔗 Live Demo
-🔗[ [View Portfolio](https://your-portfolio-link.netlify.app)](https://pritammandal.netlify.app/)
+🔗(https://pritammandal.netlify.app/)
 
