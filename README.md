@@ -1,8 +1,21 @@
-# React + Vite
+# 🌐 Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my **Portfolio Website**, showcasing my skills, projects, and experience as a Frontend Developer. Built with modern web technologies for a seamless and interactive user experience.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
+- **React.js** – Component-based UI development
+- **Vanilla CSS** – Custom styling for a sleek design
+- **GSAP** – Smooth animations and transitions
+- **Web3Forms** – Contact form handling
+- **Netlify** – Hosting and deployment
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Features
+- **Fully Responsive** – Optimized for all devices
+- **Smooth Animations** – Powered by GSAP for engaging UI effects
+- **Projects Showcase** – Highlights of my best work
+- **Contact Form** – Functional form using Web3Forms API
+- **Fast & SEO-Friendly** – Optimized for performance and discoverability
+- 
+## 🔗 Live Demo
+🔗[ [View Portfolio](https://your-portfolio-link.netlify.app)](https://pritammandal.netlify.app/)
+
