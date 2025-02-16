@@ -73,6 +73,21 @@ function Skills() {
     })
   })
 
+      const skillsHead = useRef()
+    gsap.registerPlugin(ScrollTrigger)
+    useGSAP(() => {
+        gsap.from(skillsHead.current, {
+            opacity: 0,
+            duration: 1,
+            y: 200,
+            scrollTrigger: {
+                trigger: skillsHead.current,
+                scroller: "body",
+                start: "top 105%"
+            }
+        })
+    })
+
 
   return (
     <>

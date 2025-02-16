@@ -214,9 +214,6 @@ label {
     .my-custom-title-class {
         font-size: 30px;
     }
-
-
-
 }
 
 @media (min-width : 480px) and (max-width: 1336px) {
@@ -281,6 +278,8 @@ label {
         font-size: 30px;
     }
 
+    
+
 }
 
 @media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) {
@@ -296,7 +295,7 @@ label {
     }
 
     .my-custom-title-class {
-        font-size: 30px;
+        font-size: 40px;
     }
 
 }
@@ -322,4 +321,22 @@ label {
     .my-custom-title-class {
         font-size: 30px;
     }
+}
+
+
+@media only screen and (max-width: 390px), 
+       only screen and (max-height: 844px) {
+        .my-custom-class {
+            height: 40vh;
+            width: 80vw;
+        }
+        
+        .my-custom-title-class {
+            font-size: 30px;
+        }
+        
+        .my-custom-icon-class {
+            font-size: 10px;
+        }
+
 }
