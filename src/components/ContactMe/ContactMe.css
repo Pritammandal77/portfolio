@@ -128,25 +128,27 @@ label {
 .my-custom-class {
     background-color: #2d2d2d;
     color: white;
-    width: 80vw;
+    height: 50vh;
+    width: 50vw;
 }
 
 .my-custom-title-class {
     color: #00d507;
-    font-size: 1.6rem;
+    font-size: 50px;
 }
 
 .my-custom-icon-class {
     color: #00d507;
+    font-size: 20px;
 }
 
 .my-custom-confirm-btn {
     background-color: #4caf50;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 40px;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     color: black;
@@ -204,6 +206,16 @@ label {
         padding: 10px 0px 0px 10px;
     }
 
+    .my-custom-class {
+        height: 40vh;
+        width: 80vw;
+    }
+
+    .my-custom-title-class {
+        font-size: 30px;
+    }
+
+
 
 }
 
@@ -259,6 +271,16 @@ label {
         padding: 10px 0px 0px 10px;
     }
 
+
+    .my-custom-class {
+        height: 40vh;
+        width: 80vw;
+    }
+
+    .my-custom-title-class {
+        font-size: 30px;
+    }
+
 }
 
 @media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) {
@@ -266,5 +288,38 @@ label {
     .ContactContainer {
         margin-top: 200px;
     }
+
+
+    .my-custom-class {
+        height: 40vh;
+        width: 80vw;
+    }
+
+    .my-custom-title-class {
+        font-size: 30px;
+    }
+
 }
 
+/* for Iphone SE */
+@media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+    .my-custom-class {
+        height: 60vh;
+        width: 80vw;
+    }
+
+    .my-custom-title-class {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .my-custom-class {
+        height: 60vh;
+        width: 80vw;
+    }
+
+    .my-custom-title-class {
+        font-size: 30px;
+    }
+}

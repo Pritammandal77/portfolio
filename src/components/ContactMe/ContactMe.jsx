@@ -114,7 +114,7 @@ function ContactMe() {
                             </a>
                         </div>
 
-                        <a href='pritam-resume.pdf' download="pritam-resume.pdf">
+                        <a href='/pritam-resume.pdf' download="pritam-resume.pdf">
                             <button className="button">
                                 <div className="ui">Download</div> CV
                             </button>
