@@ -30,7 +30,9 @@ body {
     width: 100vw;
     text-align: center;
     margin: 20px 0px 60px 0px;
-    color: #0ac300;
+    background: linear-gradient(90deg, #5930ff, #d52cff, orange);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .skillsDiv {
@@ -87,6 +89,8 @@ body {
 .individualskill:hover {
     scale: 1.05;
     background-color: #0e0e0e;
+    border: 2px solid #a75dd6;
+    box-shadow: 0px 0px 20px #a75dd6;
 }
 
 .individualskill>p {

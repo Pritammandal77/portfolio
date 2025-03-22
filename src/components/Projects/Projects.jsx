@@ -108,13 +108,13 @@ function Projects() {
                         </button>
                     </div>
                     <div className="card" ref={project3}>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2ZWQlo8v2szeR55CNOTMHZHTirPtsHEU2Qg&s"
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnLQSVUptuw0TlsaSPAbHgCcUqWd9BMFJ3bQ&s"
                             alt="" className="projectsImg" />
-                        <h2>Personal Portfolio</h2>
-                        <p>This is my portfolio website, Here you can find all the informations about me , Alos feel free to contact me.
+                        <h2>E-Commerce</h2>
+                        <p>It is an Ecommerce application , built using React.js , Redux.js , Tailwind CSS , Firebase.
                         </p>
                         <button className="liveViewBtn submitButton">
-                            <a href="" className="linkText"
+                            <a href="https://the-aura-mart.netlify.app" className="linkText"
                                 target="_blank">view</a>
                         </button>
                     </div>

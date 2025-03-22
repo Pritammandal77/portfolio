@@ -14,8 +14,8 @@ function Skills() {
   useGSAP(() => {
     gsap.from(SkillDiv1.current, {
       opacity: 0,
-      duration: 1,
-      y: 400,
+      duration: 0.8,
+      y: 300,
       scrollTrigger: {
         trigger: SkillDiv1.current,
         scroller: "body",
@@ -30,7 +30,7 @@ function Skills() {
   useGSAP(() => {
     gsap.from(SkillDiv2.current, {
       opacity: 0,
-      duration: 1,
+      duration: 0.8,
       y: 300,
       scrollTrigger: {
         trigger: SkillDiv2.current,
@@ -46,7 +46,7 @@ function Skills() {
   useGSAP(() => {
     gsap.from(SkillDiv3.current, {
       opacity: 0,
-      duration: 1,
+      duration: 0.8,
       y: 300,
       scrollTrigger: {
         trigger: SkillDiv3.current,
@@ -62,7 +62,7 @@ function Skills() {
   useGSAP(() => {
     gsap.from(SkillDiv4.current, {
       opacity: 0,
-      duration: 1,
+      duration: 0.8,
       y: 300,
       scrollTrigger: {
         trigger: SkillDiv4.current,

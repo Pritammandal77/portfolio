@@ -7,12 +7,17 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import Swal from 'sweetalert2'
+import { useState } from 'react';
+import Loader from '../Loader/Loader';
 
 function ContactMe() {
+
+    const [isLoading, setIsLoading] = useState(false)
 
     const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
     const onSubmit = async (event) => {
         event.preventDefault();
+        setIsLoading(true)
         const formData = new FormData(event.target);
 
         formData.append("access_key", accessKey);
@@ -35,12 +40,14 @@ function ContactMe() {
                 icon: "success",
                 draggable: true,
                 customClass: {
-                    popup: "my-custom-class", 
-                    title: "my-custom-title-class", 
-                    icon: "my-custom-icon-class",  
-                    confirmButton: "my-custom-confirm-btn", 
+                    popup: "my-custom-class",
+                    title: "my-custom-title-class",
+                    icon: "my-custom-icon-class",
+                    confirmButton: "my-custom-confirm-btn",
                 }
-            });
+            }).then(() => {
+                setIsLoading(false)
+            })
         }
     };
 
@@ -79,6 +86,11 @@ function ContactMe() {
 
     return (
         <>
+            <div className='loaderInContactUs'>
+                {
+                    isLoading && <Loader />
+                }
+            </div>
             <section className="ContactContainer">
                 <div className="contact-1" ref={contactLeftSide}>
                     <h1 className="contactHeading">Contact Me</h1>
@@ -113,8 +125,8 @@ function ContactMe() {
                                 </svg>
                             </a>
                         </div>
-
-                        <a href='/pritam-resume.pdf' download="pritam-resume.pdf">
+                        
+                        <a href='/PritamMandal_FrontendDeveloper.pdf' download="PritamMandal_FrontendDeveloper.pdf">
                             <button className="button">
                                 <div className="ui">Download</div> CV
                             </button>
@@ -130,7 +142,7 @@ function ContactMe() {
                     </div>
                     <div className='allFields'>
                         <label htmlFor="">Email Address</label>
-                        <input type="text" className="field email" placeholder="Enter Your E-mail Address"
+                        <input type="text" className="field email" placeholder="Enter Your Email Address"
                             name='email' required />
                     </div>
                     <div className='allFields'>

@@ -131,7 +131,7 @@ function Home() {
                             </a>
                         </div>
 
-                        <a href='/pritam-resume.pdf' download="pritam-resume.pdf">
+                        <a href='/PritamMandal_FrontendDeveloper.pdf' download="PritamMandal_FrontendDeveloper.pdf">
                             <button className="button">
                                 <div className="ui">Download</div> CV
                             </button>

@@ -20,10 +20,10 @@ body {
     gap: 40px;
 }
 
-
-
 .contactHeading {
-    color: #4cff4c;
+    background: linear-gradient(90deg, #5930ff, #d52cff, orange);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
     font-size: 70px;
     font-weight: 600;
@@ -56,7 +56,7 @@ body {
 
 label {
     font-size: 20px;
-    color: #4cff4c;
+    color: #a75dd6;
 }
 
 .field {
@@ -88,8 +88,8 @@ label {
     position: relative;
     padding: 10px 12px;
     font-size: 18px;
-    color: #4cff4c;
-    border: 2px solid #4cff4c;
+    color: #a75dd6;
+    border: 2px solid #a75dd6;
     border-radius: 14px;
     background-color: transparent;
     font-weight: 600;
@@ -107,7 +107,7 @@ label {
     border-radius: inherit;
     scale: 0;
     z-index: -1;
-    background-color: #4cff4c;
+    background-color: #a75dd6;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
@@ -118,7 +118,7 @@ label {
 .submitButton:hover {
     color: #212121;
     scale: 1.1;
-    box-shadow: 0px 0px 20px #4cff4c;
+    box-shadow: 0px 0px 20px #a75dd6;
 }
 
 .submitButton:active {
@@ -126,32 +126,28 @@ label {
 }
 
 .my-custom-class {
-    background-color: #2d2d2d;
+    background-color: #2b2b2b;
     color: white;
-    height: 50vh;
-    width: 50vw;
 }
 
 .my-custom-title-class {
-    color: #00d507;
-    font-size: 50px;
+    color: #a75dd6;
 }
 
 .my-custom-icon-class {
-    color: #00d507;
-    font-size: 20px;
+    color: #a75dd6;
 }
 
 .my-custom-confirm-btn {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 10px 40px;
-    border-radius: 5px;
-    font-size: 25px;
+    background-color: #a75dd6;
     cursor: pointer;
     transition: background-color 0.3s ease;
     color: black;
+}
+
+.loaderInContactUs{
+    position: absolute;
+    z-index: 100;
 }
 
 @media screen and (max-width: 450px) {
@@ -206,14 +202,7 @@ label {
         padding: 10px 0px 0px 10px;
     }
 
-    .my-custom-class {
-        height: 40vh;
-        width: 80vw;
-    }
 
-    .my-custom-title-class {
-        font-size: 30px;
-    }
 }
 
 @media (min-width : 480px) and (max-width: 1336px) {
@@ -269,17 +258,6 @@ label {
     }
 
 
-    .my-custom-class {
-        height: 40vh;
-        width: 80vw;
-    }
-
-    .my-custom-title-class {
-        font-size: 30px;
-    }
-
-    
-
 }
 
 @media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) {
@@ -288,55 +266,20 @@ label {
         margin-top: 200px;
     }
 
-
-    .my-custom-class {
-        height: 40vh;
-        width: 80vw;
-    }
-
-    .my-custom-title-class {
-        font-size: 40px;
-    }
-
 }
 
 /* for Iphone SE */
 @media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
-    .my-custom-class {
-        height: 60vh;
-        width: 80vw;
-    }
 
-    .my-custom-title-class {
-        font-size: 30px;
-    }
 }
 
 @media screen and (max-width: 360px) {
-    .my-custom-class {
-        height: 60vh;
-        width: 80vw;
-    }
-
-    .my-custom-title-class {
-        font-size: 30px;
-    }
+ 
 }
 
 
 @media only screen and (max-width: 390px), 
        only screen and (max-height: 844px) {
-        .my-custom-class {
-            height: 40vh;
-            width: 80vw;
-        }
-        
-        .my-custom-title-class {
-            font-size: 30px;
-        }
-        
-        .my-custom-icon-class {
-            font-size: 10px;
-        }
+ 
 
 }

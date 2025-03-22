@@ -35,9 +35,12 @@ header {
 }
 
 .part1 p {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 600;
-    color: #4cff4c;
+    /* color: #4cff4c; */
+    background: linear-gradient(90deg, #5930ff, #d52cff, orange);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 
 }
 
@@ -64,6 +67,9 @@ li {
     align-self: flex-start;
     display: none;
     transition: opacity 1s ease;
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }
 
 #xMark {
@@ -82,7 +88,8 @@ li {
     flex-direction: column;
     align-items: left;
     height: 100vh;
-    width: 50vw;
+    width: 60vw;
+    /* gap: 20px; */
     background-color: #1b1b1b;
     position: absolute;
     right: 0px;
@@ -93,6 +100,25 @@ li {
 .Hamburgerli {
     text-decoration: none;
     font-size: 22px;
+    display: flex;
+    gap: 10px;
+}
+
+/* hamburger animation */
+@keyframes hamAni {
+    from {
+        transform: translate3d(70vw, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.HamburgerDiv {
+    z-index: 10;
+    animation: hamAni 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    will-change: transform;
 }
 
 
