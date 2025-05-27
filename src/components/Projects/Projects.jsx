@@ -15,7 +15,7 @@ function Projects() {
         gsap.from(project1.current, {
             opacity: 0,
             duration: 0.6,
-            x: -200,
+            y: 200,
             scrollTrigger: {
                 trigger: project1.current,
                 scroller: "body",
@@ -66,7 +66,7 @@ function Projects() {
         gsap.from(project4.current, {
             opacity: 0,
             duration: 0.6,
-            x: 200,
+            y: 200,
             scrollTrigger: {
                 trigger: project4.current,
                 scroller: "body",

@@ -9,7 +9,7 @@ import Skills from './components/Skills/Skills'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Layout'
 
-
+ 
 function App() {
  
   const router = createBrowserRouter([
