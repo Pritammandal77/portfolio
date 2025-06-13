@@ -18,42 +18,24 @@ function Header() {
             <header>
                 <nav className="navBar">
                     <div className="part1">
-                      <p>{" < Pritam />"}</p>
+                        <a href="#home">
+                            <p>{" < Pritam />"}</p>
+                        </a>
                     </div>
                     <div className="part2">
                         <ul className="pcNav">
-                            <li><NavLink to='/' className="diffPages"
-                                style={({ isActive }) => ({
-                                    color: isActive ? "#a75dd6" : "white",
-                                    fontWeight: isActive ? "600" : "400",
-                                })}>Home</NavLink></li>
+                            <a href="#home">Home</a>
                             <li>
-                                <NavLink to='/about' className="diffPages"
-                                    style={({ isActive }) => ({
-                                        color: isActive ? "#a75dd6" : "white",
-                                        fontWeight: isActive ? "600" : "400",
-                                    })}>About</NavLink>
+                                <a href="#about">About</a>
                             </li>
                             <li>
-                                <NavLink to='/skills' className="diffPages"
-                                    style={({ isActive }) => ({
-                                        color: isActive ? "#a75dd6" : "white",
-                                        fontWeight: isActive ? "600" : "400",
-                                    })}>Skills</NavLink>
+                                <a href="#skills">Skills</a>
                             </li>
                             <li>
-                                <NavLink to='/projects' className="diffPages"
-                                    style={({ isActive }) => ({
-                                        color: isActive ? "#a75dd6" : "white",
-                                        fontWeight: isActive ? "600" : "400",
-                                    })}>Projects</NavLink>
+                                <a href="#projects">Projects</a>
                             </li>
                             <li>
-                                <NavLink to='/contactme' className="diffPages"
-                                    style={({ isActive }) => ({
-                                        color: isActive ? "#a75dd6" : "white",
-                                        fontWeight: isActive ? "600" : "400",
-                                    })}>Contact Me</NavLink>
+                                <a href="#contactme">Contact Me</a>
                             </li>
                         </ul>
                     </div>
@@ -61,53 +43,33 @@ function Header() {
                         <i className="fa-solid fa-bars" id='menuIcon' style={{ color: 'white' }} onClick={HandleOpenHamburger}></i>
                     </div>
                     <div className="HamburgerDiv">
-                        <ul className="Hamburgerul">
+                        <ul className="Hamburgerul bg-gray-900">
                             <li id='xMark'>
                                 <i className="fa-solid fa-xmark"
                                     style={{ color: 'white' }} onClick={HandleCloseHamburger}></i>
                             </li>
-                            <li><NavLink to='/' className="Hamburgerli"
-                                style={({ isActive }) => ({
-                                    color: isActive ? "#a75dd6" : "white",
-                                    fontWeight: isActive ? "600" : "400",
-                                })}
-                                onClick={HandleCloseHamburger}>
-                                    <i className="fa-solid fa-house"></i> <p>Home</p></NavLink></li>
-                            <li>
-                                <NavLink to='/about' className="Hamburgerli"
-                                    style={({ isActive }) => ({
-                                        color: isActive ? "#a75dd6" : "white",
-                                        fontWeight: isActive ? "600" : "400",
-                                    })}
-                                    onClick={HandleCloseHamburger}>
-                                        <i className="fa-solid fa-info-circle"></i> <p>About</p></NavLink>
+
+                            <li onClick={HandleCloseHamburger} className='hamLi'>
+                                <i className="fa-solid fa-house"></i>
+                                <a href="#home">Home</a>
                             </li>
-                            <li>
-                                <NavLink to='/skills' className="Hamburgerli"
-                                    style={({ isActive }) => ({
-                                        color: isActive ? "#a75dd6" : "white",
-                                        fontWeight: isActive ? "600" : "400",
-                                    })}
-                                    onClick={HandleCloseHamburger}>
-                                        <i className="fa-solid fa-list-check"></i><p>Skills</p></NavLink>
+
+                            <li onClick={HandleCloseHamburger} className='hamLi'>
+                                <i className="fa-solid fa-info-circle"></i>
+                                <a href="#about">About</a>
                             </li>
-                            <li>
-                                <NavLink to='/projects' className="Hamburgerli"
-                                    style={({ isActive }) => ({
-                                        color: isActive ? "#a75dd6" : "white",
-                                        fontWeight: isActive ? "600" : "400",
-                                    })}
-                                    onClick={HandleCloseHamburger}>
-                                        <i className="fa-solid fa-briefcase"></i><p>Projects</p></NavLink>
+                            <li onClick={HandleCloseHamburger} className='hamLi'>
+
+                                <i className="fa-solid fa-list-check"></i>
+                                <a href="#skills">Skills</a>
                             </li>
-                            <li>
-                                <NavLink to='/contactme' className="Hamburgerli"
-                                    style={({ isActive }) => ({
-                                        color: isActive ? "#a75dd6" : "white",
-                                        fontWeight: isActive ? "600" : "400",
-                                    })}
-                                    onClick={HandleCloseHamburger}>
-                                        <i className="fa-solid fa-address-card"></i><p>Contact Me</p></NavLink>
+                            <li onClick={HandleCloseHamburger} className='hamLi'>
+                                <i className="fa-solid fa-briefcase"></i>
+                                <a href="#projects">Projects</a>
+                            </li>
+                            <li onClick={HandleCloseHamburger} className='hamLi'>
+                                <i className="fa-solid fa-address-card"></i>
+                                <a href="#contactme">Contact Me</a>
                             </li>
                         </ul>
                     </div>

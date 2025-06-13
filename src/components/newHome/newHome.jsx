@@ -1,120 +1,33 @@
 import React from 'react';
-import './Home.css'
-import { useRef } from 'react';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import { useState } from 'react';
-import { useEffect } from 'react';
 
-function Home() {
-
-
-    const helloRef = useRef()
-    useGSAP(() => {
-        gsap.from(helloRef.current, {
-            opacity: 0,
-            duration: 0.6,
-            x: -500,
-        })
-    })
-
-    const nameRef = useRef()
-    useGSAP(() => {
-        gsap.from(nameRef.current, {
-            opacity: 0,
-            duration: 0.6,
-            x: -500,
-
-        })
-    })
-
-
-    const positionRef = useRef()
-    useGSAP(() => {
-        gsap.from(positionRef.current, {
-            opacity: 0,
-            duration: 0.6,
-            y: 300,
-
-        })
-    })
-
-    const iconsRef = useRef()
-    // gsap.registerPlugin(ScrollTrigger)
-    useGSAP(() => {
-        gsap.from(iconsRef.current, {
-            opacity: 0,
-            duration: 0.6,
-            y: 200,
-
-        })
-    })
-
-    const myImgRef = useRef()
-    useGSAP(() => {
-        gsap.from(myImgRef.current, {
-            opacity: 0,
-            duration: 0.6,
-            x: 200,
-
-        })
-    })
-
-    const fullText = " Frontend Developer";
-    const [displayedText, setDisplayedText] = useState("");
-    const [index, setIndex] = useState(0);
-    const [isDeleting, setIsDeleting] = useState(false);
-
-    useEffect(() => {
-        const typingSpeed = isDeleting ? 200 : 200;
-        const delayAfterComplete = 300;
-
-        const timeout = setTimeout(() => {
-            if (!isDeleting && index < fullText.length) {
-                setDisplayedText((prev) => prev + fullText[index]);
-                setIndex(index + 1);
-            } else if (isDeleting && index > 0) {
-                setDisplayedText((prev) => prev.slice(0, -1));
-                setIndex(index - 1);
-            } else if (index === fullText.length) {
-                setTimeout(() => setIsDeleting(true), delayAfterComplete);
-            } else if (index === 0 && isDeleting) {
-                setIsDeleting(false);
-            }
-        }, typingSpeed);
-
-        return () => clearTimeout(timeout);
-    }, [index, isDeleting, fullText]);
-
-    const myResume = 'Myresume.pdf'
-
+function newHome() {
     return (
         <>
-            <div className='new-home h-auto  xl:h-[100vh] w-[100vw] relative md:top-20 lg:top-25 xl:top-0 flex flex-col-reverse xl:flex-row newHome items-center justify-center'>
+            <div className='h-auto xl:h-[100vh] w-[100vw] relative md:top-20 lg:top-25 xl:top-0 flex flex-col-reverse xl:flex-row newHome items-center justify-center'>
 
                 <div className='w-full h-auto lg:w-[60vw] lg:h-full flex items-center justify-center'>
-
-                    <div className="max-w-3xl text-center homeData" ref={positionRef}>
+                    {/* <section className="flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-500 text-white px-6"> */}
+                    <div className="max-w-3xl text-center homeData">
                         <div className='myIntroDiv'>
                             <p className="text-3xl text-teal-400 mb-2">👋 Hello, I'm</p>
-                            <h1 className="text-5xl md:text-6xl font-bold mb-4 ">
+                            <h1 className="text-5xl md:text-6xl font-bold mb-4">
                                 Pritam Mandal
                             </h1>
                             <h2 className="text-xl md:text-2xl font-medium text-gray-300 mb-6">
                                 Frontend Developer | Aspiring Full-Stack Engineer | B.Sc. IT Student
                             </h2>
-                            <p className="text-[18px]  text-gray-400 mb-8">
+                            <p className="text-base sm:text-lg text-gray-400 mb-8">
                                 I craft clean, responsive web applications using JavaScript, React.js, Redux Toolkit, Tailwind CSS.
                                 Currently exploring the world of backend development with Node.js, Express, and MongoDB to become a full-stack developer.
                             </p>
-                            <p className="text-[18px] text-gray-400 mb-8">
+                            <p className="text-base sm:text-lg text-gray-400 mb-8">
                                 Always learning. Always building. On a mission to become a <b className='text-white'>top 1% developer. 🚀</b>
                             </p>
                         </div>
 
 
-                        <div className="flex justify-center gap-4 relative top-5 ">
-                            <a href="#projects" className="bg-teal-500 hover:bg-teal-600 text-black h-10 w-40 flex items-center justify-center px-6 py-3 rounded-full transition">
+                        <div className="flex justify-center gap-4 relative top-5">
+                            <a href="#projects" className="bg-teal-500 hover:bg-teal-600 h-10 w-40 flex items-center justify-center text-white px-6 py-3 rounded-full transition">
                                 See My Work
                             </a>
                             <a href="#contactme" className="border border-teal-500 hover:bg-teal-500 h-10 w-40 flex items-center justify-center hover:text-white text-teal-400 px-6 py-3 rounded-full transition">
@@ -123,7 +36,7 @@ function Home() {
                         </div>
 
 
-                        <div className="social-buttons relative top-10 flex items-center justify-center gap-5" ref={iconsRef}>
+                        <div className="social-buttons relative bg-amber-700 top-10 flex items-center justify-center gap-5" ref={iconsRef}>
                             <div className="socialIcons">
                                 <a href="https://github.com/Pritammandal77" className="social-button github" target="_blank">
                                     <svg className="cf-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="-2.5 0 19 19"><path d="M9.464 17.178a4.506 4.506 0 0 1-2.013.317 4.29 4.29 0 0 1-2.007-.317.746.746 0 0 1-.277-.587c0-.22-.008-.798-.012-1.567-2.564.557-3.105-1.236-3.105-1.236a2.44 2.44 0 0 0-1.024-1.348c-.836-.572.063-.56.063-.56a1.937 1.937 0 0 1 1.412.95 1.962 1.962 0 0 0 2.682.765 1.971 1.971 0 0 1 .586-1.233c-2.046-.232-4.198-1.023-4.198-4.554a3.566 3.566 0 0 1 .948-2.474 3.313 3.313 0 0 1 .091-2.438s.773-.248 2.534.945a8.727 8.727 0 0 1 4.615 0c1.76-1.193 2.532-.945 2.532-.945a3.31 3.31 0 0 1 .092 2.438 3.562 3.562 0 0 1 .947 2.474c0 3.54-2.155 4.32-4.208 4.548a2.195 2.195 0 0 1 .625 1.706c0 1.232-.011 2.227-.011 2.529a.694.694 0 0 1-.272.587z"></path></svg>
@@ -172,9 +85,8 @@ function Home() {
                 </div>
 
             </div>
-
         </>
     );
 }
 
-export default Home;
+export default newHome;

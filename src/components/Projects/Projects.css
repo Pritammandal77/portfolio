@@ -26,8 +26,8 @@ body {
 .card {
     position: relative;
     width: 334px;
-    height: 424px;
-    background-color: #000;
+    height: 474px;
+    background-color: #0b0f19;
     display: flex;
     flex-direction: column;
     padding: 12px;
@@ -65,7 +65,52 @@ body {
 
 .projectsImg {
     height: 170px;
+    width: 100%;
     border-radius: 5px;
+}
+
+.liveViewBtn {
+    /* min-height: 50px; */
+    /* width: 150px; */
+    cursor: pointer;
+    position: relative;
+    padding: 10px 12px;
+    font-size: 18px;
+    color: #a75dd6;
+    border: 2px solid #a75dd6;
+    border-radius: 14px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+}
+
+.liveViewBtn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: #a75dd6;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.liveViewBtn:hover::before {
+    scale: 3;
+}
+
+.liveViewBtn:hover {
+    color: #212121;
+    scale: 1.1;
+    box-shadow: 0px 0px 20px #a75dd6;
+}
+
+.liveViewBtn:active {
+    scale: 1;
 }
 
 .liveViewBtn {
@@ -97,7 +142,7 @@ body {
 
     .projectsPage {
         height: auto;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
         padding: 100px 0px;
     }
 
@@ -155,7 +200,7 @@ body {
 
 @media (min-width : 912px) and (max-width: 1336px) {
     .projectsPage {
-        padding-bottom: 200px;
+        padding-bottom: 100px;
     }
 
     .card {
@@ -168,6 +213,7 @@ body {
 @media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) {
     .projectsPage {
         padding: 0px 0px 100px 0px;
+        /* background-color: aqua; */
     }
 
     .card {

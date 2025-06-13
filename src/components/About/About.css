@@ -20,7 +20,7 @@ body {
 .aboutPart1 {
     width: 35vw;
     height: 80vh;
-    
+
 }
 
 .aboutPart2 {
@@ -33,37 +33,31 @@ body {
     gap: 30px;
 }
 
-.aboutMe {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
 .aboutMe p {
-    font-size: 20px;
     text-align: justify;
 }
 
 .aboutMe h1 {
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 600;
     color: #a75dd6;
 }
 
-.aboutPageSkills {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
 
 .aboutPageSkills h1 {
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 600;
     color: #a75dd6;
 }
 
 .aboutPageSkills b {
     color: #3efcff;
+}
+
+.aboutAllSections {
+    background-color: #1f2937;
+    padding: 20px;
+    border-radius: 15px;
 }
 
 .aboutMe,
@@ -105,15 +99,10 @@ body {
         padding: 0px 0px 0px 0px;
     }
 
-    .aboutMe {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+    .aboutAllSections {
+        padding: 18px 10px;
     }
 
-    .aboutMe p {
-        font-size: 18px;
-    }
 }
 
 

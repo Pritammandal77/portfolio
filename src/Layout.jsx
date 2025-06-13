@@ -3,13 +3,15 @@ import Header from './components/Header/Header';
 import { Outlet } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 import MainBody from './components/MainBody/MainBody';
+import ScrollToTop from './scrollToTop';
 
 function Layout() {
   return (
     <>
-      <Header/>
-      <Outlet/>
-      <Footer/>
+      <ScrollToTop />
+      <Header />
+      <Outlet />
+      <Footer />
     </>
   );
 }

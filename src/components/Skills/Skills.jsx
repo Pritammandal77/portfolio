@@ -19,7 +19,8 @@ function Skills() {
       scrollTrigger: {
         trigger: SkillDiv1.current,
         scroller: "body",
-        start: "top 110%"
+        start: "top 110%",
+        toggleActions: "play none none reverse",
       }
 
     })
@@ -35,7 +36,8 @@ function Skills() {
       scrollTrigger: {
         trigger: SkillDiv2.current,
         scroller: "body",
-        start: "top 110%"
+        start: "top 110%",
+        toggleActions: "play none none reverse",
       }
 
     })
@@ -51,7 +53,8 @@ function Skills() {
       scrollTrigger: {
         trigger: SkillDiv3.current,
         scroller: "body",
-        start: "top 110%"
+        start: "top 110%",
+        toggleActions: "play none none reverse",
       }
 
     })
@@ -67,26 +70,59 @@ function Skills() {
       scrollTrigger: {
         trigger: SkillDiv4.current,
         scroller: "body",
-        start: "top 110%"
+        start: "top 110%",
+        toggleActions: "play none none reverse",
       }
 
     })
   })
 
-      const skillsHead = useRef()
-    gsap.registerPlugin(ScrollTrigger)
-    useGSAP(() => {
-        gsap.from(skillsHead.current, {
-            opacity: 0,
-            duration: 1,
-            y: 200,
-            scrollTrigger: {
-                trigger: skillsHead.current,
-                scroller: "body",
-                start: "top 105%"
-            }
-        })
+  // const SkillDiv4 = useRef();
+  // gsap.registerPlugin(ScrollTrigger);
+
+  // useGSAP(() => {
+  //   gsap.fromTo(
+  //     SkillDiv4.current,
+  //     {
+  //       opacity: 0,
+  //       y: 100,
+  //       scale: 0.9,
+  //       rotateX: 30,
+  //     },
+  //     {
+  //       opacity: 1,
+  //       y: 0,
+  //       scale: 1,
+  //       rotateX: 0,
+  //       duration: 1.2,
+  //       ease: "power4.out",
+  //       scrollTrigger: {
+  //         trigger: SkillDiv4.current,
+  //         scroller: "body",
+  //         start: "top 90%",
+  //         end: "top 50%",
+  //         scrub: 0.5,
+  //         toggleActions: "play none none reverse",
+  //       },
+  //     }
+  //   );
+  // });
+
+
+  const skillsHead = useRef()
+  gsap.registerPlugin(ScrollTrigger)
+  useGSAP(() => {
+    gsap.from(skillsHead.current, {
+      opacity: 0,
+      duration: 1,
+      y: 200,
+      scrollTrigger: {
+        trigger: skillsHead.current,
+        scroller: "body",
+        start: "top 105%"
+      }
     })
+  })
 
 
   return (
@@ -97,7 +133,7 @@ function Skills() {
         <div className='skillsDiv'>
 
           <div className='SkillsBox' ref={SkillDiv1}>
-            <h1>Languages</h1>
+            <h1 className='text-2xl md:text-3xl'>Languages</h1>
             <div className='skillsLogoDiv'>
               <div className='individualskill'>
                 <img src="html.png" alt="" className='skillslogoimg' />
@@ -122,7 +158,7 @@ function Skills() {
           </div>
 
           <div className='SkillsBox' ref={SkillDiv2}>
-            <h1 className='librariesHeading'>Libraries & Frameworks</h1>
+            <h1 className='librariesHeading text-2xl md:text-3xl'>Libraries & Frameworks</h1>
 
             <div className='skillsLogoDiv'>
               <div className='individualskill'>
@@ -149,7 +185,7 @@ function Skills() {
 
 
           <div className='SkillsBox' ref={SkillDiv3}>
-            <h1>Tools</h1>
+            <h1 className='text-2xl md:text-3xl'>Tools</h1>
 
             <div className='skillsLogoDiv'>
               <div className='individualskill'>
@@ -171,7 +207,7 @@ function Skills() {
 
 
           <div className='SkillsBox' ref={SkillDiv4}>
-            <h1>Others</h1>
+            <h1 className='text-2xl md:text-3xl'>Others</h1>
 
             <div className='skillsLogoDiv'>
               <div className='individualskill'>
@@ -186,7 +222,7 @@ function Skills() {
 
               <div className='individualskill'>
                 <img src="communication.png" alt="" className='skillslogoimg invertColor' />
-                <p>Communi- <br/>cation</p>
+                <p>Communi- <br />cation</p>
               </div>
 
               <div className='individualskill'>
@@ -196,7 +232,7 @@ function Skills() {
             </div>
           </div>
 
-          </div>
+        </div>
       </div>
     </>
   );

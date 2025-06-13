@@ -12,92 +12,15 @@ body {
   width: 100%;
 }
 
-.mainBodyContainer {
-  height: 100vh;
-  width: 100%;
-  color: white;
-  background-color: #0F1214;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 0px 100px 0px 100px;
-  box-sizing: border-box;
-
-}
-
-.bodyContainer1 {
-  width: 60vw;
-  height: 40vh;
-}
-
 .bodyContainer2 {
   width: 30vw;
   display: flex;
   justify-content: center;
-}
+} 
 
 .myImg {
   height: 60vh;
   border-radius: 50%;
-}
-
-
-.myName {
-  font-size: 90px;
-  /* color: #4cff4c; */
-  font-weight: 600;
-  background: linear-gradient(90deg, #5930ff, #d52cff, orange);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-
-.positionDiv {
-  display: flex;
-}
-
-.myRole {
-  font-size: 70px;
-  /* color: #00b9ce; */
-  background: linear-gradient(90deg, #5930ff, #d52cff, orange);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.myRole>pre {
-  font-weight: 600;
-}
-
-.IamA {
-  font-size: 70px;
-}
-
-.myRole {
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.cursor {
-  display: inline-block;
-  animation: blink 0.8s infinite;
-  color: #6e6e6e;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-
-.social-buttons {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 10px 10px;
-  border-radius: 5em;
-  width: 450px;
-  margin: 40px 0px 0px 0px;
-
 }
 
 .socialIcons {
@@ -176,8 +99,6 @@ body {
 .instagram:hover svg {
   fill: #c13584;
 }
-
-
 
 
 .ui {
@@ -292,54 +213,18 @@ body {
 
 
 @media screen and (max-width: 450px) {
-  .mainBodyContainer {
-    flex-direction: column-reverse;
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    top: 50px;
-    align-items: center;
-    padding: 0px 0px 120px 0px;
-    justify-content: space-evenly;
-    margin-top: 20px;
-  }
 
-  .bodyContainer1 {
+  .bodyContainer2 {
     width: 100vw;
-    height: auto;
-    text-align: center;
   }
 
   .myImg {
-    height: 30vh;
-  }
-
-  .hello {
-    font-size: 33px;
-  }
-
-  .myName {
-    font-size: 45px;
-    color: #4cff4c;
-    font-weight: 600;
-  }
-
-  .IamA {
-    font-size: 30px;
+    height: 220px;
+    width: 220px;
   }
 
   .social-buttons {
-
-    margin: 0px 0px 0px 0px;
-  
-  }
-  .myRole {
-    font-size: 40px;
-  }
-
-  .myRole>b {
-    color: #3efcff;
-    font-size: 40px;
+    margin: 20px 0px 0px 0px;
 
   }
 
@@ -352,13 +237,23 @@ body {
   }
 
   .button {
-    border: 2px solid rgb(176, 176, 176);
+    border: 1px solid rgb(176, 176, 176);
   }
 
-  .positionDiv {
-    height: 100px;
-    flex-direction: column;
-    margin-top: 10px;
+  .newHome {
+    margin-top: 6vh;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+    background-color: #2c2c2c;
+    transition: all 0.2s ease;
+  }
+
+  .new-home {
+    padding: 0px 0px 100px 0px;
   }
 
 }
@@ -369,68 +264,29 @@ body {
 
   }
 
-  .mainBodyContainer {
-    margin: 0px 0px 100px 0px;
+
+  .myImg {
+    height: 180px;
+    width: 180px;
   }
 }
 
 @media (min-width : 480px) and (max-width: 1336px) {
-  .mainBodyContainer {
-    flex-direction: column-reverse;
-    height: 80vh;
-    width: 100%;
-    position: relative;
-    top: 80px;
-    align-items: center;
-    /* background-color: #2b2b2b; */
-    padding: 0px 0px 0px 0px;
-    justify-content: space-evenly;
-    margin-top: 20px;
-  }
-
-  .bodyContainer1 {
+  .bodyContainer2 {
     width: 100vw;
-    /* background-color: rgb(0, 114, 76); */
-    height: 40vh;
-    text-align: center;
   }
 
   .myImg {
-    height: 30vh;
+    height: 250px;
+    width: 250px;
   }
 
-  .hello {
-    font-size: 33px;
-  }
-
-  .myName {
-    font-size: 55px;
-    color: #4cff4c;
-    font-weight: 600;
-  }
-
-  .IamA {
-    font-size: 40px;
-    /* background-color: #3efcff; */
-  }
-
-  .myRole {
-    font-size: 60px;
-  }
-
-  .myRole>b {
-    color: #3efcff;
-    font-size: 40px;
-
-  }
 
   .social-buttons {
     flex-direction: column;
     gap: 20px;
     justify-content: center;
     align-items: center;
-    /* background-color: #0077b5; */
-    width: 100vw;
   }
 
   .button {
@@ -440,11 +296,14 @@ body {
   .positionDiv {
     height: 120px;
     flex-direction: column;
-    /* background-color: #0EC8EE; */
-    /* margin-top: 20px; */
   }
 
 }
 
+.myIntroDiv {
+  padding: 0px 10px;
+}
 
-
+.newFont {
+  font-family: 'Playfair Display', serif;
+}
