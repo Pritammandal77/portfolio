@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './ContactMe.css';
-
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+gsap.registerPlugin(ScrollTrigger);
 import Swal from 'sweetalert2'
 import { useState } from 'react';
 import Loader from '../Loader/Loader';
@@ -52,40 +51,30 @@ function ContactMe() {
     };
 
 
-    const contactLeftSide = useRef()
-    gsap.registerPlugin(ScrollTrigger)
-    useGSAP(() => {
-        gsap.from(contactLeftSide.current, {
-            opacity: 0,
-            duration: 0.6,
-            y: 300,
-            scrollTrigger: {
-                trigger: contactLeftSide.current,
-                scroller: "body",
-                start: "top 100%",
-                toggleActions: "play none none reverse",
-
-            }
-        })
-    })
-
-
-    const contactRightSide = useRef()
-    gsap.registerPlugin(ScrollTrigger)
-    useGSAP(() => {
-        gsap.from(contactRightSide.current, {
-            opacity: 0,
-            duration: 0.6,
-            y: 300,
-            scrollTrigger: {
-                trigger: contactRightSide.current,
-                scroller: "body",
-                start: "top 100%",
-                toggleActions: "play none none reverse",
-
-            }
-        })
-    })
+    useEffect(() => {
+        gsap.utils.toArray(".reveal-section").forEach((el) => {
+            gsap.fromTo(
+                el,
+                {
+                    y: 100,
+                    opacity: 0,
+                    scale: 0.9,
+                },
+                {
+                    y: 0,
+                    opacity: 1,
+                    scale: 1,
+                    duration: 1,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse",
+                    },
+                }
+            );
+        });
+    }, []);
 
 
     return (
@@ -96,7 +85,7 @@ function ContactMe() {
                 }
             </div>
             <section className="ContactContainer">
-                <div className="contact-1" ref={contactLeftSide}>
+                <div className="contact-1 reveal-section">
                     <h1 className="contactHeading">Contact Me</h1>
                     <img src="contactme.svg" alt="Sorry Image Can't Load"
                         className="contactMeSvg" />
@@ -138,7 +127,7 @@ function ContactMe() {
                     </div>
                 </div>
 
-                <form className="contact-2" onSubmit={onSubmit} ref={contactRightSide}>
+                <form className="contact-2 reveal-section" onSubmit={onSubmit} >
                     <div className='allFields'>
                         <label htmlFor="" className=''> Full Name</label>
                         <input type="text" className="field fullname" placeholder="Enter Your Name"
