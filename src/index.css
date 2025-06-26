@@ -45,3 +45,16 @@ a:active {
     background: #000000;
     /* Slightly lighter black when hovered */
 }
+
+.reveal-section {
+    opacity: 0;
+    transform: translateY(30px);
+    will-change: transform, opacity;
+    transition: none;
+    /* Prevent conflict with CSS transitions */
+}
+
+.reveal-section {
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+}
