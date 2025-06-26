@@ -60,13 +60,13 @@ function Skills() {
 
   return (
     <>
-      <div className='skillsContainer'>
+      <div className='skillsContainer '>
         <h1 className="skillsMainHead">Skills</h1>
 
         <div className='w-[90vw] xl:w-[80vw] h-auto p-5 rounded-3xl bg-[#1f2937]  lg:px-10 flex flex-col gap-10'>
 
           <div className='flex flex-col gap-3 '>
-            <h1 className='text-4xl '>Frontend</h1>
+            <h1 className='text-3xl md:text-4xl'>Frontend</h1>
             <div className='skills-div grid grid-cols-3 md:grid-cols-5 xl:grid-cols-6  gap-5'>
               {
                 frontendSkills && frontendSkills.map((data) => (
@@ -80,7 +80,7 @@ function Skills() {
           </div>
 
           <div className='flex flex-col gap-3'>
-            <h1 className='text-4xl '>Backend</h1>
+            <h1 className='text-3xl md:text-4xl '>Backend</h1>
             <div className='skills-div grid grid-cols-3 md:grid-cols-5 xl:grid-cols-6 gap-5'>
               {
                 backendSkills && backendSkills.map((data) => (
@@ -95,7 +95,7 @@ function Skills() {
 
 
           <div className='flex flex-col gap-3'>
-            <h1 className='text-4xl '>Tools</h1>
+            <h1 className='text-3xl md:text-4xl'>Tools</h1>
             <div className='skills-div grid grid-cols-3 md:grid-cols-5 xl:grid-cols-6 gap-5'>
               {
                 tools && tools.map((data) => (

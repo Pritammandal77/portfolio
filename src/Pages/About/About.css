@@ -60,6 +60,10 @@ body {
     border-radius: 15px;
 }
 
+.degree{
+    font-weight: 700;
+}
+
 .aboutMe,
 .AboutSkillsDiv,
 .certificationsDiv {
@@ -85,7 +89,7 @@ body {
 @media screen and (max-width: 450px) {
 
     .fullAboutPage {
-        padding: 80px 25px 100px 25px;
+        padding: 80px 25px 0px 25px;
         margin-top: 0px;
     }
 
