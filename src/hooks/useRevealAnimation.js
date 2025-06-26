@@ -6,47 +6,52 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function useRevealAnimation(targetClass = ".reveal-section") {
   useEffect(() => {
-    // Initial hidden state (GPU-accelerated)
-    gsap.set(targetClass, {
+    const elements = gsap.utils.toArray(targetClass);
+
+    // Set initial state with GPU-friendly props
+    gsap.set(elements, {
       opacity: 0,
-      y: 40,
+      y: 50,
       willChange: 'opacity, transform',
+      force3D: true,
     });
 
-    ScrollTrigger.batch(targetClass, {
-      interval: 0.15, // reduces trigger frequency (MOBILE FRIENDLY)
-      batchMax: 4,    // only 4 elements at once => smooth for mobiles
+    ScrollTrigger.batch(elements, {
+      interval: 0.2,       // more relaxed, smoother on low-end mobile
+      batchMax: 3,         // fewer elements in one go = less jank
       onEnter: (batch) => {
         gsap.to(batch, {
           opacity: 1,
           y: 0,
-          stagger: 0.1,
-          duration: 0.6,
-          ease: "power3.out",
+          duration: 0.8,    // slightly slower = smoother
+          ease: "power2.out",
+          stagger: 0.15,
           overwrite: "auto",
         });
       },
       onLeave: (batch) => {
-        gsap.set(batch, { opacity: 0, y: 40 });
+        gsap.set(batch, { opacity: 0, y: 50 });
       },
       onEnterBack: (batch) => {
         gsap.to(batch, {
           opacity: 1,
           y: 0,
+          duration: 0.8,
+          ease: "power2.out",
           stagger: 0.1,
-          duration: 0.6,
-          ease: "power3.out",
           overwrite: "auto",
         });
       },
       onLeaveBack: (batch) => {
-        gsap.set(batch, { opacity: 0, y: 40 });
+        gsap.set(batch, { opacity: 0, y: 50 });
       },
-      start: "top 85%",
-      end: "bottom 15%",
+      start: "top 90%",
+      end: "bottom 10%",
+      fastScrollEnd: true,      // for fast flick scrolls
       toggleActions: "play none none none",
     });
 
+    // Cleanup on unmount
     return () => {
       ScrollTrigger.getAll().forEach(t => t.kill());
     };
