@@ -7,33 +7,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 function Projects() {
-
-    // useEffect(() => {
-    //     gsap.utils.toArray(".reveal-section").forEach((el) => {
-    //         gsap.fromTo(
-    //             el,
-    //             {
-    //                 y: 100,
-    //                 opacity: 0,
-    //                 scale: 0.9,
-    //             },
-    //             {
-    //                 y: 0,
-    //                 opacity: 1,
-    //                 scale: 1,
-    //                 duration: 1,
-    //                 ease: "power3.out",
-    //                 scrollTrigger: {
-    //                     trigger: el,
-    //                     start: "top 85%",
-    //                     toggleActions: "play none none reverse",
-    //                 },
-    //             }
-    //         );
-    //     });
-    // }, []);
-
-
     return (
         <>
             <div className="projectsPage">

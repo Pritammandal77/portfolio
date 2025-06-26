@@ -12,45 +12,32 @@ export function useRevealAnimation(targetClass = ".reveal-section") {
       opacity: 0,
       y: 50,
       willChange: 'opacity, transform',
-      force3D: true,
     });
 
     ScrollTrigger.batch(elements, {
-      interval: 0.2,       // more relaxed, smoother on low-end mobile
-      batchMax: 3,         
+      interval: 0.2,
+      batchMax: 5,
+      start: "top 85%",
+      end: "bottom 10%",
+      fastScrollEnd: true,
+
       onEnter: (batch) => {
         gsap.to(batch, {
           opacity: 1,
           y: 0,
-          duration: 0.8,    
-          ease: "power2.out",
-          stagger: 0.15,
-          overwrite: "auto",
-        });
-      },
-      onLeave: (batch) => {
-        gsap.set(batch, { opacity: 0, y: 50 });
-      },
-      onEnterBack: (batch) => {
-        gsap.to(batch, {
-          opacity: 1,
-          y: 0,
           duration: 0.8,
-          ease: "power2.out",
-          stagger: 0.1,
-          overwrite: "auto",
+          ease: "power3.out",
+          stagger: 0.15,
         });
       },
-      onLeaveBack: (batch) => {
-        gsap.set(batch, { opacity: 0, y: 50 });
-      },
-      start: "top 90%",
-      end: "bottom 10%",
-      fastScrollEnd: true,      // for fast flick scrolls
-      toggleActions: "play none none none",
+
+      onLeave: () => { },
+
+      //No animation on scroll-up
+      onEnterBack: () => { },
+      onLeaveBack: () => { },
     });
 
-    // Cleanup on unmount
     return () => {
       ScrollTrigger.getAll().forEach(t => t.kill());
     };
