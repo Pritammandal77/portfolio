@@ -7,11 +7,6 @@ body {
   box-sizing: border-box;
 }
 
-body {
-  height: 100vh;
-  width: 100%;
-}
-
 .bodyContainer2 {
   width: 30vw;
   display: flex;
@@ -48,18 +43,6 @@ body {
 .social-buttons svg {
   transition: 0.3s;
   height: 20px;
-}
-
-.facebook {
-  background-color: #3b5998;
-}
-
-.facebook svg {
-  fill: #f2f2f2;
-}
-
-.facebook:hover svg {
-  fill: #3b5998;
 }
 
 .github {
@@ -100,7 +83,6 @@ body {
   fill: #c13584;
 }
 
-
 .ui {
   color: #4cf;
   display: inline;
@@ -112,7 +94,6 @@ body {
   border-radius: 20px;
   border: none;
   color: #fff;
-  font-weight: 00;
   cursor: pointer;
   font-size: 1.5em;
   font-weight: 600;
@@ -209,11 +190,7 @@ body {
   }
 }
 
-
-
-
 @media screen and (max-width: 450px) {
-
   .bodyContainer2 {
     width: 100vw;
   }
@@ -224,27 +201,16 @@ body {
   }
 
   .social-buttons {
-    margin: 20px 0px 0px 0px;
-
-  }
-
-  .social-buttons {
     flex-direction: column;
     gap: 20px;
     justify-content: center;
     align-items: center;
     width: 100vw;
+    margin-top: 20px;
   }
 
   .button {
     border: 1px solid rgb(176, 176, 176);
-  }
-
-  .newHome {
-    margin-top: 6vh;
-  }
-
-  .button {
     padding: 10px 20px;
     font-size: 1.2em;
     font-weight: 600;
@@ -253,17 +219,14 @@ body {
   }
 
   .new-home {
-    padding: 0px 0px 100px 0px;
+    padding-bottom: 100px;
   }
-
 }
 
 @media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
   .social-buttons {
-    margin: 0px 0px 0px 0px;
-
+    margin: 0;
   }
-
 
   .myImg {
     height: 180px;
@@ -281,7 +244,6 @@ body {
     width: 250px;
   }
 
-
   .social-buttons {
     flex-direction: column;
     gap: 20px;
@@ -292,18 +254,8 @@ body {
   .button {
     border: 2px solid rgb(176, 176, 176);
   }
-
-  .positionDiv {
-    height: 120px;
-    flex-direction: column;
-  }
-
 }
 
 .myIntroDiv {
   padding: 0px 10px;
-}
-
-.newFont {
-  font-family: 'Playfair Display', serif;
 }

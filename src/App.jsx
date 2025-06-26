@@ -1,13 +1,13 @@
 import './App.css'
-import About from './components/About/About'
-import ContactMe from './components/ContactMe/ContactMe'
+import ContactMe from './Pages/ContactMe/ContactMe'
 import Header from './components/Header/Header'
-import Home from './components/Home/Home'
+import Home from './Pages/Home/Home'
 import MainBody from './components/MainBody/MainBody'
-import Projects from './components/Projects/Projects'
-import Skills from './components/Skills/Skills'
+import Projects from './Pages/Projects/Projects'
+import Skills from './Pages/Skills/Skills'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Layout'
+import About from './Pages/About/About'
 
  
 function App() {

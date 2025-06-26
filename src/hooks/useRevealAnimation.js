@@ -8,7 +8,6 @@ export function useRevealAnimation(targetClass = ".reveal-section") {
   useEffect(() => {
     const elements = gsap.utils.toArray(targetClass);
 
-    // Set initial state with GPU-friendly props
     gsap.set(elements, {
       opacity: 0,
       y: 50,
@@ -18,12 +17,12 @@ export function useRevealAnimation(targetClass = ".reveal-section") {
 
     ScrollTrigger.batch(elements, {
       interval: 0.2,       // more relaxed, smoother on low-end mobile
-      batchMax: 3,         // fewer elements in one go = less jank
+      batchMax: 3,         
       onEnter: (batch) => {
         gsap.to(batch, {
           opacity: 1,
           y: 0,
-          duration: 0.8,    // slightly slower = smoother
+          duration: 0.8,    
           ease: "power2.out",
           stagger: 0.15,
           overwrite: "auto",

@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 import Swal from 'sweetalert2'
 import { useState } from 'react';
-import Loader from '../Loader/Loader';
+import Loader from '../../components/Loader/Loader';
 
 function ContactMe() {
 

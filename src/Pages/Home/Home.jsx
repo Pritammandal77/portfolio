@@ -3,8 +3,6 @@ import './Home.css'
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { useState } from 'react';
-import { useEffect } from 'react';
 
 function Home() {
 
@@ -40,7 +38,6 @@ function Home() {
     })
 
     const iconsRef = useRef()
-    // gsap.registerPlugin(ScrollTrigger)
     useGSAP(() => {
         gsap.from(iconsRef.current, {
             opacity: 0,
@@ -60,44 +57,18 @@ function Home() {
         })
     })
 
-    const fullText = " Frontend Developer";
-    const [displayedText, setDisplayedText] = useState("");
-    const [index, setIndex] = useState(0);
-    const [isDeleting, setIsDeleting] = useState(false);
-
-    useEffect(() => {
-        const typingSpeed = isDeleting ? 200 : 200;
-        const delayAfterComplete = 300;
-
-        const timeout = setTimeout(() => {
-            if (!isDeleting && index < fullText.length) {
-                setDisplayedText((prev) => prev + fullText[index]);
-                setIndex(index + 1);
-            } else if (isDeleting && index > 0) {
-                setDisplayedText((prev) => prev.slice(0, -1));
-                setIndex(index - 1);
-            } else if (index === fullText.length) {
-                setTimeout(() => setIsDeleting(true), delayAfterComplete);
-            } else if (index === 0 && isDeleting) {
-                setIsDeleting(false);
-            }
-        }, typingSpeed);
-
-        return () => clearTimeout(timeout);
-    }, [index, isDeleting, fullText]);
-
     const myResume = 'Myresume.pdf'
 
     return (
         <>
-            <div className='new-home h-auto  xl:h-[100vh] w-[100vw] relative md:top-20 lg:top-25 xl:top-0 flex flex-col-reverse xl:flex-row newHome items-center justify-center'>
+            <div className='new-home h-auto pt-13 md:pt-0 xl:h-[100vh] w-[100vw] relative md:top-20 lg:top-25 xl:top-0 flex flex-col-reverse xl:flex-row newHome items-center justify-center'>
 
                 <div className='w-full h-auto lg:w-[60vw] lg:h-full flex items-center justify-center'>
 
                     <div className="max-w-3xl text-center homeData" ref={positionRef}>
                         <div className='myIntroDiv'>
                             <p className="text-3xl text-teal-400 mb-2">👋 Hello, I'm</p>
-                            <h1 className="text-5xl md:text-6xl font-bold mb-4 ">
+                            <h1 className="text-4xl md:text-6xl font-bold mb-4 ">
                                 Pritam Mandal
                             </h1>
                             <h2 className="text-xl md:text-2xl font-medium text-gray-300 mb-6">

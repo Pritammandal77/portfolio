@@ -1,10 +1,9 @@
 import React from 'react';
-import About from '../About/About';
-import Skills from '../Skills/Skills';
-import Projects from '../Projects/Projects';
-import ContactMe from '../ContactMe/ContactMe';
-import newHome from '../newHome/newHome';
-import Home from '../Home/Home';
+import About from '../../Pages/About/About';
+import Skills from '../../Pages/Skills/Skills';
+import Projects from '../../Pages/Projects/Projects';
+import ContactMe from '../../Pages/ContactMe/ContactMe';
+import Home from '../../Pages/Home/Home';
 
 function MainBody() {
   return (
