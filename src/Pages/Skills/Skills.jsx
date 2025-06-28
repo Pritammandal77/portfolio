@@ -22,12 +22,12 @@ function Skills() {
   ]
 
   const tools = [
-    { id: 12, name: "Vercel", logo: "https://img.icons8.com/ios-filled/500/vercel.png" },
-    { id: 13, name: "Netlify", logo: "https://seeklogo.com/images/N/netlify-logo-758722CDF4-seeklogo.com.png" },
     { id: 14, name: "Git", logo: "https://img.icons8.com/color/480/git.png" },
     { id: 15, name: "GitHub", logo: "https://img.icons8.com/3d-fluency/94/github-logo.png" },
     { id: 16, name: "Postman", logo: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/480/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" },
     { id: 17, name: "VS Code", logo: "https://img.icons8.com/color/480/visual-studio-code-2019.png" },
+    { id: 12, name: "Vercel", logo: "https://img.icons8.com/ios-filled/500/vercel.png" },
+    { id: 13, name: "Netlify", logo: "https://seeklogo.com/images/N/netlify-logo-758722CDF4-seeklogo.com.png" },
   ]
 
   const softSkills = [

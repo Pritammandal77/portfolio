@@ -39,7 +39,6 @@ header {
     background: linear-gradient(90deg, #5930ff, #d52cff, orange);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-
 }
 
 ul {

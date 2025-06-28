@@ -11,7 +11,7 @@ body {
   width: 30vw;
   display: flex;
   justify-content: center;
-} 
+}
 
 .myImg {
   height: 60vh;
@@ -188,6 +188,11 @@ body {
       110% 10%;
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
+}
+
+
+.a-tag {
+  color: black;
 }
 
 @media screen and (max-width: 450px) {

@@ -67,16 +67,15 @@ function Home() {
 
                     <div className="max-w-3xl text-center homeData" ref={positionRef}>
                         <div className='myIntroDiv'>
-                            <p className="text-3xl text-teal-400 mb-2">👋 Hello, I'm</p>
-                            <h1 className="text-4xl md:text-6xl font-bold mb-4 ">
+                            <p className="text-3xl text-teal-400 mb-2">Hello, I'm</p>
+                            <h1 className="text-4xl md:text-5xl font-bold mb-4 ">
                                 Pritam Mandal
                             </h1>
                             <h2 className="text-xl md:text-2xl font-medium text-gray-300 mb-6">
                                 Frontend Developer | Aspiring Full-Stack Engineer | B.Sc. IT Student
                             </h2>
                             <p className="text-[18px]  text-gray-400 mb-8">
-                                I craft clean, responsive web applications using JavaScript, React.js, Redux Toolkit, Tailwind CSS.
-                                Currently exploring the world of backend development with Node.js, Express, and MongoDB to become a full-stack developer.
+                             I build seamless web experiences that blend beautiful interfaces with powerful backend logic — ensuring every interaction feels intuitive and impactful.
                             </p>
                             <p className="text-[18px] text-gray-400 mb-8">
                                 Always learning. Always building. On a mission to become a <b className='text-white'>top 1% developer. 🚀</b>
@@ -85,10 +84,10 @@ function Home() {
 
 
                         <div className="flex justify-center gap-4 relative top-5 ">
-                            <a href="#projects" className="bg-teal-500 hover:bg-teal-600 text-black h-10 w-40 flex items-center justify-center px-6 py-3 rounded-full transition">
+                            <a href="#projects" className="a-tag bg-teal-500 hover:bg-teal-600 text-black h-10 w-40 flex items-center justify-center px-6 py-3 rounded-full transition">
                                 See My Work
                             </a>
-                            <a href="#contactme" className="border border-teal-500 hover:bg-teal-500 h-10 w-40 flex items-center justify-center hover:text-white text-teal-400 px-6 py-3 rounded-full transition">
+                            <a href="#contactme" className="border border-teal-500 hover:bg-teal-500 h-10 w-40 flex items-center justify-center text-teal-400 px-6 py-3 rounded-full transition">
                                 Let's Connect
                             </a>
                         </div>
