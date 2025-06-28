@@ -1,7 +1,5 @@
 import './App.css'
 import ContactMe from './Pages/ContactMe/ContactMe'
-import Header from './components/Header/Header'
-import Home from './Pages/Home/Home'
 import MainBody from './components/MainBody/MainBody'
 import Projects from './Pages/Projects/Projects'
 import Skills from './Pages/Skills/Skills'

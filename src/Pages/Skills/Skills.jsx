@@ -3,7 +3,6 @@ import './Skills.css'
 
 function Skills() {
 
-
   const frontendSkills = [
     { id: 1, name: "HTML", logo: "https://img.icons8.com/color/480/html-5--v1.png" },
     { id: 2, name: "CSS", logo: "https://img.icons8.com/color/480/css3.png" },
@@ -12,7 +11,6 @@ function Skills() {
     { id: 5, name: "Redux Toolkit", logo: "https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png" },
     { id: 6, name: "Tailwind CSS", logo: "https://img.icons8.com/color/480/tailwindcss.png" },
   ]
-
 
   const backendSkills = [
     { id: 7, name: "Node.js", logo: "https://img.icons8.com/color/480/nodejs.png" },
@@ -41,23 +39,6 @@ function Skills() {
     { id: 25, name: "Self Learning", logo: "https://img.icons8.com/fluency/480/mind-map.png" }
   ]
 
-  const skills = [
-    // --------- Frontend ---------
-
-    // --------- Backend ---------
-
-    // --------- Cloud / Firebase / Hosting ---------
-
-
-    // --------- Deployment & APIs ---------
-
-    { id: 19, name: "JSON", logo: "https://img.icons8.com/fluency/480/json.png" },
-
-
-
-  ];
-
-
   return (
     <>
       <div className='skillsContainer '>
@@ -66,7 +47,7 @@ function Skills() {
         <div className='w-[90vw] xl:w-[80vw] h-auto p-5 rounded-3xl bg-[#1f2937]  lg:px-10 flex flex-col gap-10'>
 
           <div className='flex flex-col gap-3 '>
-            <h1 className='text-3xl md:text-4xl'>Frontend</h1>
+            <h1 className='text-3xl md:text-4xl russo-one-regular text-gray-400'>Frontend</h1>
             <div className='skills-div grid grid-cols-3 md:grid-cols-5 xl:grid-cols-6  gap-5'>
               {
                 frontendSkills && frontendSkills.map((data) => (
@@ -80,7 +61,7 @@ function Skills() {
           </div>
 
           <div className='flex flex-col gap-3'>
-            <h1 className='text-3xl md:text-4xl '>Backend</h1>
+            <h1 className='text-3xl md:text-4xl russo-one-regular text-gray-400'>Backend</h1>
             <div className='skills-div grid grid-cols-3 md:grid-cols-5 xl:grid-cols-6 gap-5'>
               {
                 backendSkills && backendSkills.map((data) => (
@@ -95,7 +76,7 @@ function Skills() {
 
 
           <div className='flex flex-col gap-3'>
-            <h1 className='text-3xl md:text-4xl'>Tools</h1>
+            <h1 className='text-3xl md:text-4xl russo-one-regular text-gray-400'>Tools</h1>
             <div className='skills-div grid grid-cols-3 md:grid-cols-5 xl:grid-cols-6 gap-5'>
               {
                 tools && tools.map((data) => (
@@ -109,7 +90,7 @@ function Skills() {
           </div>
 
           <div className='flex flex-col gap-3'>
-            <h1 className='text-3xl md:text-4xl '>Soft skills</h1>
+            <h1 className='text-3xl md:text-4xl russo-one-regular text-gray-400'>Soft skills</h1>
             <div className='skills-div grid grid-cols-3 md:grid-cols-5 xl:grid-cols-6 gap-5'>
               {
                 softSkills && softSkills.map((data) => (
@@ -129,6 +110,40 @@ function Skills() {
 }
 
 export default Skills;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 {/* <div className='skillsDiv'>
