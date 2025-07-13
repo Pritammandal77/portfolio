@@ -47,7 +47,7 @@ function Projects() {
                 {projectsData.map((project, index) => (
                     <div
                         key={index}
-                        className="relative w-[90vw] md:w-[45vw] h-auto md:h-[auto] md:min-h-[64vh] lg:h-[50vh] xl:h-[75vh] bg-[#202022] border-1 border-[#303030] flex flex-col gap-3 rounded-lg cursor-pointer hover:shadow-[0_0_20px_#1f1f1f] hover:border-[#714f91] "
+                        className="reveal-section relative w-[90vw] md:w-[45vw] h-auto md:h-[auto] md:min-h-[64vh] lg:h-[50vh] xl:h-[75vh] bg-[#202022] border-1 border-[#303030] flex flex-col gap-3 rounded-lg cursor-pointer hover:shadow-[0_0_20px_#1f1f1f] hover:border-[#714f91] "
                     >
                         <a href={project.githubLink} target='_blank' rel="noreferrer">
                             <img
