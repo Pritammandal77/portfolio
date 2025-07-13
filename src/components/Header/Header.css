@@ -22,12 +22,15 @@ header {
     height: 10vh;
     display: flex;
     justify-content: space-between;
-    background-color: #0a0a0a;
+    background-color: rgba(10, 10, 10, 0.4); /* transparent black */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
     padding: 0px 30px;
     align-items: center;
     font-size: 24px;
     color: white;
 }
+
 
 .part1 {
     font-size: 22px;

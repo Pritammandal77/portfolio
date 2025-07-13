@@ -25,14 +25,16 @@ body {
 }
 
 .skillsMainHead {
-    font-size: 70px;
+    font-size: 50px;
     font-weight: 550;
     width: 100vw;
     text-align: center;
     margin: 20px 0px 60px 0px;
-    background: linear-gradient(90deg, #5930ff, #d52cff, orange);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #e7e7e7
+        /* color: white; */
+        /* background: linear-gradient(90deg, #5930ff, #d52cff, orange); */
+        /* background-clip: text;
+    -webkit-text-fill-color: transparent; */
 }
 
 .skillsDiv {
@@ -51,7 +53,7 @@ body {
     display: flex;
     flex-direction: column;
     height: auto;
-    background-color: #1f2937;
+    background-color: #4894ff;
     width: 42vw;
     display: flex;
     flex-direction: column;
@@ -72,9 +74,10 @@ body {
 
 
 .individualskill {
-    background-color: #0b0f19;
-    height: 140px;
-    width: 8vw;
+    background-color: #202022;
+    border: 2px solid #2e2e2e;
+    height: 160px;
+    width: 12vw;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -88,9 +91,9 @@ body {
 
 .individualskill:hover {
     scale: 1.05;
-    background-color: #0e0e0e;
-    border: 2px solid #a75dd6;
-    box-shadow: 0px 0px 20px #a75dd6;
+    /* background-color: #2b2b2b; */
+    border: 2px solid #212121;
+    box-shadow: 0px 0px 20px #424242;
 }
 
 /* .individualskill>p {
@@ -245,8 +248,8 @@ body {
 
 }
 
-@media (min-width: 1336px) {
+/* @media (min-width: 1336px) {
     .individualskill {
         width: 9vw;
     }
-}
+} */

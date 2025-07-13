@@ -9,7 +9,8 @@ function About() {
     return (
         <div className="fullAboutPage py-100 ">
             <div className="aboutPart1">
-                <img src="/fullimage.jpg" alt="" className="aboutPageImg reveal-section" />
+                <img src="/aboutPageImg.jpg" alt="" className="aboutPageImg reveal-section rounded-2xl" />
+                {/* <div className="absolute w-[300px] h-[300px] bg-pink-500 opacity-30 rounded-full blur-[150px] top-[10%] left-[10%]" /> */}
             </div>
             <div className="aboutPart2">
                 <div className="aboutMe aboutAllSections flex flex-col gap-[10px] reveal-section">

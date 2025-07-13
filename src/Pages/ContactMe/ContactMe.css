@@ -21,11 +21,11 @@ body {
 }
 
 .contactHeading {
-    background: linear-gradient(90deg, #5930ff, #d52cff, orange);
+    /* background: linear-gradient(90deg, #5930ff, #d52cff, orange);
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
     text-align: center;
-    font-size: 70px;
+    font-size: 50px;
     font-weight: 600;
 }
 
@@ -56,13 +56,13 @@ body {
 
 label {
     font-size: 20px;
-    color: #a75dd6;
+    color: #a060d7;
 }
 
 .field {
     width: 40vw;
     height: 40px;
-    background-color: #1f2937;
+    background-color: #202022;
     color: white;
     border: none;
     border-radius: 10px;

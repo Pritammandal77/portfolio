@@ -42,9 +42,9 @@ function Skills() {
   return (
     <>
       <div className='skillsContainer '>
-        <h1 className="skillsMainHead">Skills</h1>
+        <h1 className="skillsMainHead">Skills & technologies</h1>
 
-        <div className='w-[90vw] xl:w-[80vw] h-auto p-5 rounded-3xl bg-[#1f2937]  lg:px-10 flex flex-col gap-10'>
+        <div className='w-[90vw] xl:w-[90vw] h-auto p-5 rounded-3xl lg:px-10 flex flex-col gap-10'>
 
           <div className='flex flex-col gap-3 '>
             <h1 className='text-3xl md:text-4xl russo-one-regular text-gray-400'>Frontend</h1>

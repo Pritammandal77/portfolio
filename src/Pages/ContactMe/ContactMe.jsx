@@ -129,18 +129,18 @@ function ContactMe() {
 
                 <form className="contact-2 reveal-section" onSubmit={onSubmit} >
                     <div className='allFields'>
-                        <label htmlFor="" className=''> Full Name</label>
-                        <input type="text" className="field fullname" placeholder="Enter Your Name"
+                        <label htmlFor="" className=''> Full name</label>
+                        <input type="text" className="field fullname" placeholder="enter name"
                             name='name' required />
                     </div>
                     <div className='allFields'>
-                        <label htmlFor="">Email Address</label>
-                        <input type="text" className="field email" placeholder="Enter Your Email Address"
+                        <label htmlFor="">Email address</label>
+                        <input type="text" className="field email" placeholder="enter email"
                             name='email' required />
                     </div>
                     <div className='allFields'>
-                        <label htmlFor="">Your Message</label>
-                        <textarea name="message" id="" placeholder='Enter your message'
+                        <label htmlFor="">Your message</label>
+                        <textarea name="message" id="" placeholder='enter message'
                             className="field textArea" required></textarea>
                     </div>
 
