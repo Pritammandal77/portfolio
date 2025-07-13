@@ -17,7 +17,9 @@ body {
   height: 60vh;
   border-radius: 50%;
 }
-
+.myName{
+  font-weight: 700;
+}
 .socialIcons {
   display: flex;
 }
@@ -191,8 +193,9 @@ body {
 }
 
 
-.a-tag {
-  color: black;
+.seeMyWorkBtn {
+  color: #ffffff;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 450px) {

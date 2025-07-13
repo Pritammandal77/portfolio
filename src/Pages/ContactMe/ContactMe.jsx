@@ -84,9 +84,9 @@ function ContactMe() {
                     isLoading && <Loader />
                 }
             </div>
-            <section className="ContactContainer">
+            <section className="ContactContainer overflow-x-hidden overflow-y-hidden relative">
                 <div className="contact-1 reveal-section">
-                    <h1 className="contactHeading">Contact Me</h1>
+                    <h1 className="text-[40px] lg:text-[50px] font-semibold text-center mb-[60px] text-[#e7e7e7] russo-one-regular">Contact Me</h1>
                     <img src="contactme.svg" alt="Sorry Image Can't Load"
                         className="contactMeSvg" />
                     <div className="social-buttons contactSocialBtn flex items-center justify-center">
@@ -129,18 +129,18 @@ function ContactMe() {
 
                 <form className="contact-2 reveal-section" onSubmit={onSubmit} >
                     <div className='allFields'>
-                        <label htmlFor="" className=''> Full Name</label>
-                        <input type="text" className="field fullname" placeholder="Enter Your Name"
+                        <label htmlFor="" className=''> Full name</label>
+                        <input type="text" className="field fullname" placeholder="enter name"
                             name='name' required />
                     </div>
                     <div className='allFields'>
-                        <label htmlFor="">Email Address</label>
-                        <input type="text" className="field email" placeholder="Enter Your Email Address"
+                        <label htmlFor="">Email address</label>
+                        <input type="text" className="field email" placeholder="enter email"
                             name='email' required />
                     </div>
                     <div className='allFields'>
-                        <label htmlFor="">Your Message</label>
-                        <textarea name="message" id="" placeholder='Enter your message'
+                        <label htmlFor="">Your message</label>
+                        <textarea name="message" id="" placeholder='enter message'
                             className="field textArea" required></textarea>
                     </div>
 
@@ -149,6 +149,11 @@ function ContactMe() {
                         Send Message
                     </button>
                 </form>
+
+                <div className="absolute w-[200px] h-[200px] bg-blue-700 opacity-30 rounded-full blur-[150px] top-[10%] left-[10%]" />
+                <div className="absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[40%] left-[70%]" />
+                <div className="md:hidden absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[70%] left-[10%]" />
+
             </section>
         </>
     );

@@ -19,7 +19,7 @@ function Header() {
                 <nav className="navBar">
                     <div className="part1">
                         <a href="#home">
-                            <p>{" < Pritam />"}</p>
+                            <p className='text-[25px] md:text-[30px]'>{" < Pritam />"}</p>
                         </a>
                     </div>
                     <div className="part2">
@@ -42,8 +42,8 @@ function Header() {
                     <div className="iconToOpenHamburger">
                         <i className="fa-solid fa-bars" id='menuIcon' style={{ color: 'white' }} onClick={HandleOpenHamburger}></i>
                     </div>
-                    <div className="HamburgerDiv">
-                        <ul className="Hamburgerul bg-gray-900">
+                    <div className="HamburgerDiv ">
+                        <ul className="Hamburgerul bg-[#141414]">
                             <li id='xMark'>
                                 <i className="fa-solid fa-xmark"
                                     style={{ color: 'white' }} onClick={HandleCloseHamburger}></i>

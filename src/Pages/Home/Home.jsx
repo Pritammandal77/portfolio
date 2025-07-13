@@ -57,37 +57,36 @@ function Home() {
         })
     })
 
-    const myResume = 'Myresume.pdf'
 
     return (
         <>
-            <div className='new-home h-auto pt-13 md:pt-0 xl:h-[100vh] w-[100vw] relative md:top-20 lg:top-25 xl:top-0 flex flex-col-reverse xl:flex-row newHome items-center justify-center'>
+            <div className='new-home h-auto md:h-[100vh] pt-13 md:pt-0 xl:h-[100vh] w-[100vw] overflow-x-hidden overflow-y-hidden relative lg:top-25 xl:top-0 flex flex-col-reverse xl:flex-row newHome items-center justify-center'>
 
                 <div className='w-full h-auto lg:w-[60vw] lg:h-full flex items-center justify-center'>
 
-                    <div className="max-w-3xl text-center homeData" ref={positionRef}>
+                    <div className="max-w-3xl md:h-[55vh] text-center homeData relative xl:top-7" ref={positionRef}>
                         <div className='myIntroDiv'>
-                            <p className="text-3xl text-teal-400 mb-2">Hello, I'm</p>
-                            <h1 className="text-4xl md:text-5xl font-bold mb-4 ">
+                            <p className="text-3xl md:text-5xl xl:text-4xl mb-2 applyFontBold">Hello, I'm</p>
+                            <h1 className="myName text-4xl md:text-6xl font-bold mb-4 text-[#9F4AEF] ">
                                 Pritam Mandal
                             </h1>
-                            <h2 className="text-xl md:text-2xl font-medium text-gray-300 mb-6">
-                                Frontend Developer | Aspiring Full-Stack Engineer | B.Sc. IT Student
+                            <h2 className="text-xl md:text-4xl font-medium text-[#D8B4FE] mb-6">
+                                FullStack Developer | BSc IT Student
                             </h2>
-                            <p className="text-[18px]  text-gray-400 mb-8">
-                             I build seamless web experiences that blend beautiful interfaces with powerful backend logic — ensuring every interaction feels intuitive and impactful.
+                            <p className="text-[18px] md:text-[25px] lg:text-[22px]  text-gray-400 mb-8">
+                                I build seamless web experiences that blend beautiful interfaces with powerful backend logic — ensuring every interaction feels intuitive and impactful.
                             </p>
-                            <p className="text-[18px] text-gray-400 mb-8">
+                            <p className="text-[18px]  md:text-[25px] lg:text-[21px] text-gray-400 mb-8">
                                 Always learning. Always building. On a mission to become a <b className='text-white'>top 1% developer. 🚀</b>
                             </p>
                         </div>
 
 
                         <div className="flex justify-center gap-4 relative top-5 ">
-                            <a href="#projects" className="a-tag bg-teal-500 hover:bg-teal-600 text-black h-10 w-40 flex items-center justify-center px-6 py-3 rounded-full transition">
+                            <a href="#projects" className="seeMyWorkBtn bg-[#9333EA] hover:bg-[#18181B] hover:border-1 hover:border-[#9333EA] text-white h-10 w-40 flex items-center justify-center px-6 py-3 rounded-full transition">
                                 See My Work
                             </a>
-                            <a href="#contactme" className="border border-teal-500 hover:bg-teal-500 h-10 w-40 flex items-center justify-center text-teal-400 px-6 py-3 rounded-full transition">
+                            <a href="#contactme" className="border border-[#9333EA] hover:bg-[#9333EA] h-10 w-40 flex items-center justify-center text-[#9333EA] px-6 py-3 rounded-full transition">
                                 Let's Connect
                             </a>
                         </div>
@@ -134,13 +133,16 @@ function Home() {
                     {/* </section> */}
                 </div>
 
-                <div className='w-full h-[30vh] homePic lg:w-[40vw] lg:h-full flex items-center justify-center'>
+                <div className='w-full h-[30vh] homePic lg:w-[40vw] lg:h-full flex items-center justify-center relative xl:top-7'>
                     <div className="bodyContainer2">
                         <img src="/myNewDp.jpg" alt="Sorry The Image is Not Available"
                             className="myImg" ref={myImgRef} />
                     </div>
                 </div>
-
+                
+                <div className="absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[10%] left-[10%]" />
+                <div className="absolute w-[200px] h-[200px] bg-blue-700 opacity-30 rounded-full blur-[150px] top-[70%] left-[70%]" />
+                
             </div>
 
         </>
