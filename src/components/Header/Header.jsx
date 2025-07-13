@@ -19,7 +19,7 @@ function Header() {
                 <nav className="navBar">
                     <div className="part1">
                         <a href="#home">
-                            <p>{" < Pritam />"}</p>
+                            <p className='text-[25px] md:text-[30px]'>{" < Pritam />"}</p>
                         </a>
                     </div>
                     <div className="part2">

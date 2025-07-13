@@ -86,7 +86,7 @@ function ContactMe() {
             </div>
             <section className="ContactContainer overflow-x-hidden overflow-y-hidden relative">
                 <div className="contact-1 reveal-section">
-                    <h1 className="contactHeading">Contact Me</h1>
+                    <h1 className="text-[40px] lg:text-[50px] font-semibold text-center mb-[60px] text-[#e7e7e7] russo-one-regular">Contact Me</h1>
                     <img src="contactme.svg" alt="Sorry Image Can't Load"
                         className="contactMeSvg" />
                     <div className="social-buttons contactSocialBtn flex items-center justify-center">

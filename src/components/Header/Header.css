@@ -22,9 +22,11 @@ header {
     height: 10vh;
     display: flex;
     justify-content: space-between;
-    background-color: rgba(10, 10, 10, 0.4); /* transparent black */
+    background-color: rgba(10, 10, 10, 0.4);
+    /* transparent black */
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    -webkit-backdrop-filter: blur(10px);
+    /* Safari support */
     padding: 0px 30px;
     align-items: center;
     font-size: 24px;
@@ -37,11 +39,11 @@ header {
 }
 
 .part1 p {
-    font-size: 30px;
     font-weight: 600;
-    background: linear-gradient(90deg, #5930ff, #d52cff, orange);
+    /* background: linear-gradient(90deg, #5930ff, #d52cff, orange);
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
+    color: #9F4AEF;
 }
 
 ul {
@@ -91,7 +93,7 @@ li {
     width: 60vw;
     position: absolute;
     right: 0px;
-    padding:20px;
+    padding: 20px;
     z-index: 100;
 }
 
@@ -130,7 +132,7 @@ li {
 @media screen and (max-width: 1024px) {
     #xMark {
         align-self: flex-end;
-        font-size: 30px;
+        font-size: 25px;
         position: relative;
         bottom: 23px;
     }
