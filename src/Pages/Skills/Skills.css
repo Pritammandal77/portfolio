@@ -125,17 +125,14 @@ body {
     }
 
     .skillsMainHead {
-        font-size: 50px;
+        font-size: 35px;
+        padding: 0px 20px;
     }
 
     .skillsDiv {
         display: flex;
         flex-direction: column;
     }
-
-    /* .librariesHeading {
-        font-size: 27px;
-    } */
 
     .SkillsBox {
         padding: 20px;

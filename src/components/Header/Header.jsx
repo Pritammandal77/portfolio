@@ -42,8 +42,8 @@ function Header() {
                     <div className="iconToOpenHamburger">
                         <i className="fa-solid fa-bars" id='menuIcon' style={{ color: 'white' }} onClick={HandleOpenHamburger}></i>
                     </div>
-                    <div className="HamburgerDiv">
-                        <ul className="Hamburgerul bg-gray-900">
+                    <div className="HamburgerDiv ">
+                        <ul className="Hamburgerul bg-[#141414]">
                             <li id='xMark'>
                                 <i className="fa-solid fa-xmark"
                                     style={{ color: 'white' }} onClick={HandleCloseHamburger}></i>

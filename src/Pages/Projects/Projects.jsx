@@ -96,8 +96,99 @@
 // export default Projects;
 
 
-import React, { useEffect } from 'react';
-import './Projects.css';
+// import React, { useEffect } from 'react';
+// import './Projects.css';
+// import { useRef } from 'react';
+// import { useGSAP } from '@gsap/react';
+// import gsap from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// gsap.registerPlugin(ScrollTrigger);
+
+// const projectsData = [
+//     {
+//         title: "E-Commerce",
+//         description: "It is an fullstack Ecommerce application , where users can browse a lot of products , search products , browse products by categories , authentication & database using firebase , user can add products to cart , track thier ordered products.",
+//         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnLQSVUptuw0TlsaSPAbHgCcUqWd9BMFJ3bQ&s",
+//         skills: ["React.js", "Redux Toolkit", "Tailwind css", "Firebase"],
+//         liveLink: "https://the-aura-mart.netlify.app",
+//         githubLink: "https://github.com/Pritammandal77/E-Commerce"
+//     },
+//     {
+//         title: "Zeno AI",
+//         description: "It Is A smart and interactive chatbot & Voice Asistant designed to provide quick, accurate, and engaging responses to users. User can chat with AI powered by Groq API & also talk with the voice assistant created by the Web Speech API.",
+//         image: "https://media.istockphoto.com/id/1465545513/photo/chatbot.jpg?s=612x612&w=0&k=20&c=3IZrVSv95FmcHt744wvcvZiml1LXTnEQimq_3V5CCbQ=",
+//         skills: ["React.js", "redux toolkit", "tailwind css"],
+//         liveLink: "https://the-zeno-ai.netlify.app/",
+//         githubLink: "https://github.com/Pritammandal77/Zeno-AI"
+//     },
+//     {
+//         title: "Recipe Gram",
+//         description: "It is a recipe App ,User can browse diffferent types of recipes ,can Search Recipes ,view The full detailed recipe with its Ingredients . Also can save Favourite Recipes on localStorage & Delete Recipes.",
+//         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJCuJEpFVYi-SFcwsK_9li9t9aQdfyrXxGyA&s",
+//         skills: ["React.js", "Vanila CSS", "Context API"],
+//         liveLink: "https://recipe-gram.netlify.app/",
+//         githubLink: "https://github.com/Pritammandal77/Recipe-App"
+//     },
+//     {
+//         title: "New Project coming soon",
+//         description: "Something big is coming soon 🔥",
+//         image: "/newProjectImg.jpeg", // Use your actual base64 image here
+//         liveLink: "#",
+//         githubLink: "#"
+//     }
+// ];
+
+// function Projects() {
+//     return (
+//         <>
+//             <div className="projectsPage">
+//                 <h1 className="projectHeading">My Projects</h1>
+//                 <div className="projectsDiv">
+//                     {projectsData.map((project, index) => (
+//                         <div className="card reveal-section" key={index}>
+//                             <a href={project.githubLink} target='_blank' rel="noreferrer">
+//                                 <img src={project.image} alt={project.title} className="projectsImg" />
+//                             </a>
+//                             <div className='p-4 flex flex-col gap-2'>
+//                                 <h2 className='applyFontBold text-2xl font-bold'>{project.title}</h2>
+//                                 <p>{project.description}</p>
+//                                 <div className='flex flex-wrap gap-4 py-2'>
+//                                     {
+//                                         project?.skills?.map((data) => (
+//                                             <p className='text-[#D8B4FE] bg-[#303034] px-2 py-1 rounded-xl border-1 
+//                                             border-[#585858]'>{data}</p>
+//                                         ))
+//                                     }
+//                                 </div>
+//                                 <div className='w-[100%] flex justify-between'>
+//                                     <button className="w-[49%] bg-[#9333EA] px-3 py-2 rounded-[8px] text-[16px] flex items-center justify-center gap-3">
+//                                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
+//                                         <a href={project.liveLink} className="linkText" target="_blank" rel="noreferrer">
+//                                             Live view
+//                                         </a>
+//                                     </button>
+//                                     <button className='w-[49%] border-1 border-[#4b4b4b] px-3 py-2 rounded-[8px] flex items-center justify-center gap-3 '>
+//                                         <i className="fa-brands fa-github "></i>
+//                                         <a href={project.githubLink} target='_blank' rel="noreferrer" className='cursor-pointer'>
+//                                             Source code
+//                                         </a>
+//                                     </button>
+//                                 </div>
+//                             </div>
+
+//                         </div>
+//                     ))}
+//                 </div>
+//             </div>
+//         </>
+//     );
+// }
+
+// export default Projects;
+
+
+
+import React from 'react';
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -132,7 +223,7 @@ const projectsData = [
     {
         title: "New Project coming soon",
         description: "Something big is coming soon 🔥",
-        image: "/newProjectImg.jpeg", // Use your actual base64 image here
+        image: "/newProjectImg.jpeg",
         liveLink: "#",
         githubLink: "#"
     }
@@ -140,47 +231,58 @@ const projectsData = [
 
 function Projects() {
     return (
-        <>
-            <div className="projectsPage">
-                <h1 className="projectHeading">My Projects</h1>
-                <div className="projectsDiv">
-                    {projectsData.map((project, index) => (
-                        <div className="card reveal-section" key={index}>
-                            <a href={project.githubLink} target='_blank' rel="noreferrer">
-                                <img src={project.image} alt={project.title} className="projectsImg" />
-                            </a>
-                            <div className='p-4 flex flex-col gap-2'>
-                                <h2 className='applyFontBold text-2xl font-bold'>{project.title}</h2>
-                                <p>{project.description}</p>
-                                <div className='flex flex-wrap gap-4 py-2'>
-                                    {
-                                        project?.skills?.map((data) => (
-                                            <p className='text-[#D8B4FE] bg-[#303034] px-2 py-1 rounded-xl border-1 
-                                            border-[#585858]'>{data}</p>
-                                        ))
-                                    }
-                                </div>
-                                <div className='w-[100%] flex justify-between'>
-                                    <button className="w-[49%] bg-[#9333EA] px-3 py-2 rounded-[8px] text-[16px] flex items-center justify-center gap-3">
-                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                        <a href={project.liveLink} className="linkText" target="_blank" rel="noreferrer">
-                                            Live view
-                                        </a>
-                                    </button>
-                                    <button className='w-[49%] border-1 border-[#4b4b4b] px-3 py-2 rounded-[8px] flex items-center justify-center gap-3 '>
-                                        <i className="fa-brands fa-github "></i>
-                                        <a href={project.githubLink} target='_blank' rel="noreferrer" className='cursor-pointer'>
-                                            Source code
-                                        </a>
-                                    </button>
-                                </div>
+        <div className="w-[100vw] flex flex-col gap-10 justify-center items-center px-4 md:px-0 py-24 overflow-x-hidden relative">
+            <h1 className="text-[50px] font-semibold text-center text-[#e7e7e7] mb-16">My Projects</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-[100%] md:w-[90vw] place-items-center">
+                {projectsData.map((project, index) => (
+                    <div
+                        key={index}
+                        className="relative w-[90vw] md:w-[45vw] h-auto md:h-[auto] md:min-h-[64vh] lg:h-[50vh] xl:h-[75vh] bg-[#202022] border-2 border-[#2e2e2e] flex flex-col gap-3 rounded-lg cursor-pointer hover:shadow-[0_0_20px_#1f1f1f] hover:border-[#262626] "
+                    >
+                        <a href={project.githubLink} target='_blank' rel="noreferrer">
+                            <img
+                                src={project.image}
+                                alt={project.title}
+                                className="w-full h-[27vh] md:h-[25vh] lg:h-[35vh] rounded"
+                            />
+                        </a>
+                        <div className='flex flex-col gap-2 p-3 md:p-4'>
+                            <h2 className='text-2xl font-bold'>{project.title}</h2>
+                            <p className='text-[17px] text-justify'>{project.description}</p>
+                            <div className='flex flex-wrap gap-4 py-2'>
+                                {project?.skills?.map((data, idx) => (
+                                    <p
+                                        key={idx}
+                                        className='text-[#D8B4FE] bg-[#303034] px-2 py-1 rounded-xl border border-[#585858]'
+                                    >
+                                        {data}
+                                    </p>
+                                ))}
                             </div>
-
+                            <div className='w-full flex justify-between'>
+                                <button className="w-[49%] bg-[#9333EA] px-3 py-2 rounded-lg text-[16px] flex items-center justify-center gap-3">
+                                    <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <a href={project.liveLink} className="text-white" target="_blank" rel="noreferrer">
+                                        Live view
+                                    </a>
+                                </button>
+                                <button className='w-[49%] border border-[#4b4b4b] px-3 py-2 rounded-lg flex items-center justify-center gap-3'>
+                                    <i className="fa-brands fa-github"></i>
+                                    <a href={project.githubLink} target='_blank' rel="noreferrer" className='cursor-pointer text-white'>
+                                        Source code
+                                    </a>
+                                </button>
+                            </div>
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
-        </>
+
+            <div className="absolute w-[200px] h-[200px] bg-blue-700 opacity-30 rounded-full blur-[150px] top-[10%] left-[10%]" />
+            <div className="absolute w-[200px] h-[200px] bg-cyan-700 opacity-30 rounded-full blur-[130px] top-[40%] left-[70%]" />
+            <div className="absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[130px] top-[80%] left-[10%]" />
+          
+        </div>
     );
 }
 

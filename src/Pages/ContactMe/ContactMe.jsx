@@ -84,7 +84,7 @@ function ContactMe() {
                     isLoading && <Loader />
                 }
             </div>
-            <section className="ContactContainer">
+            <section className="ContactContainer overflow-x-hidden overflow-y-hidden relative">
                 <div className="contact-1 reveal-section">
                     <h1 className="contactHeading">Contact Me</h1>
                     <img src="contactme.svg" alt="Sorry Image Can't Load"
@@ -149,6 +149,11 @@ function ContactMe() {
                         Send Message
                     </button>
                 </form>
+
+                <div className="absolute w-[200px] h-[200px] bg-blue-700 opacity-30 rounded-full blur-[150px] top-[10%] left-[10%]" />
+                <div className="absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[40%] left-[70%]" />
+                <div className="md:hidden absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[70%] left-[10%]" />
+
             </section>
         </>
     );

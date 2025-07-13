@@ -5,7 +5,7 @@ body {
 
 .fullAboutPage {
     height: auto;
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -92,6 +92,7 @@ body {
     .fullAboutPage {
         padding: 80px 25px 0px 25px;
         margin-top: 0px;
+        width: 100vw;
     }
 
     .aboutPart1 {
