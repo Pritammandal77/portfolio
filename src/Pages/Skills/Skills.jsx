@@ -39,7 +39,7 @@ function Skills() {
 
   return (
     // <div className='w-[100vw] overflow-x-hidden text-white flex flex-col gap-10 items-center px-4 py-[50px] lg:px-[100px]'>
-    <div className='w-full h-auto overflow-x-hidden flex flex-col gap-10 items-center justify-evenly px-4 py-[50px] lg:px-[100px] relative mt-0 md:mt-[50px]'>
+    <div className='w-full h-auto overflow-x-hidden overflow-y-hidden flex flex-col gap-10 items-center justify-evenly px-4 py-[50px] lg:px-[100px] relative mt-0 md:mt-[50px]'>
       <h1 className="text-[35px] lg:text-[50px] font-semibold text-center mb-[60px] text-[#e7e7e7] russo-one-regular">Skills & technologies</h1>
 
       <div className='w-[100vw] xl:w-[90vw] h-auto rounded-3xl lg:px-10 flex flex-col gap-10'>
@@ -49,11 +49,11 @@ function Skills() {
             <div className='grid grid-cols-3 md:grid-cols-5 xl:grid-cols-6 gap-5 w-[100%] ' >
               {section.skills.map((data) => (
                 <div
-                  className='bg-[#202022] border-2 border-[#2e2e2e] w-[27vw] md:w-[16vw] lg:h-[160px] lg:w-[12vw] text-center flex flex-col items-center justify-evenly p-2 rounded-[10px] gap-2 cursor-pointer hover:scale-105 hover:border-[#212121] hover:shadow-[0px_0px_20px_#424242] transition-all reveal-section'
+                  className='bg-[#202022] border-2 border-[#2e2e2e] w-[27vw] md:w-[16vw] lg:h-[160px] lg:w-[12vw] text-center flex flex-col items-center justify-evenly p-2 rounded-[10px] gap-2 lg:gap-1 cursor-pointer hover:scale-105 hover:border-[#212121] hover:shadow-[0px_0px_20px_#2D2E38] transition-all reveal-section'
                   key={data.id}
                 >
                   <img src={data.logo} alt={data.name} className='w-[55px]' />
-                  <p className='text-[13px] md:text-[16px]'>{data.name}</p>
+                  <p className='text-[13px] md:text-[17px]'>{data.name}</p>
                 </div>
               ))}
             </div>

@@ -5,7 +5,7 @@ function About() {
     useRevealAnimation();
 
     return (
-        <div className="w-full h-auto overflow-x-hidden flex flex-col md:flex-row items-center justify-evenly px-[50px] py-[10vh] pb-[50px] relative mt-0 md:mt-[50px]">
+        <div className="w-full h-auto overflow-x-hidden overflow-y-hidden flex flex-col md:flex-row items-center justify-evenly px-[50px] py-[10vh] pb-[50px] relative mt-0 md:mt-[50px]">
             <div className="hidden xl:flex items-end justify-end w-[35vw] h-[90vh]">
                 <img
                     src="/aboutPageImg.jpg"

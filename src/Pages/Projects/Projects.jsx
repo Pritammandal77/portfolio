@@ -41,7 +41,7 @@ const projectsData = [
 
 function Projects() {
     return (
-        <div className="w-[100vw] flex flex-col gap-10 justify-center items-center px-4 md:px-0 py-14 md:py-24 overflow-x-hidden relative">
+        <div className="w-[100vw] flex flex-col gap-10 justify-center items-center px-4 md:px-0 py-14 md:py-24 overflow-x-hidden overflow-y-hidden relative">
             <h1 className="text-[40px] lg:text-[50px] font-semibold text-center mb-[60px] text-[#e7e7e7] russo-one-regular">My Projects</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-[100%] md:w-[90vw] place-items-center">
                 {projectsData.map((project, index) => (
