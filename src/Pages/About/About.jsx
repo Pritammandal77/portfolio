@@ -1,8 +1,6 @@
 import React from 'react';
-import { useRevealAnimation } from '../../hooks/useRevealAnimation';
 
 function About() {
-    useRevealAnimation();
 
     return (
         <div className="w-full h-auto overflow-x-hidden overflow-y-hidden flex flex-col md:flex-row items-center justify-evenly px-[50px] py-[10vh] pb-[50px] relative mt-0 md:mt-[50px]">
