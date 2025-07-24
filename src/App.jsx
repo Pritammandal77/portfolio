@@ -6,7 +6,8 @@ import Skills from './Pages/Skills/Skills'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Layout'
 import About from './Pages/About/About'
-
+import { useEffect } from 'react'
+import Lenis from "Lenis"
  
 function App() {
  
@@ -38,6 +39,15 @@ function App() {
       ]
     },
   ]);
+
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time = any){
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  }, []);
 
 
   return (
