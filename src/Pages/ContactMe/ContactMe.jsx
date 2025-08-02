@@ -52,7 +52,7 @@ function ContactMe() {
 
 
     // useEffect(() => {
-    //     gsap.utils.toArray(".reveal-section").forEach((el) => {
+    //     gsap.utils.toArray(". ").forEach((el) => {
     //         gsap.fromTo(
     //             el,
     //             {
@@ -85,7 +85,7 @@ function ContactMe() {
                 }
             </div>
             <section className="ContactContainer overflow-x-hidden overflow-y-hidden relative">
-                <div className="contact-1 reveal-section">
+                <div className="contact-1  ">
                     <h1 className="text-[40px] lg:text-[50px] font-semibold text-center mb-[60px] text-[#e7e7e7] russo-one-regular">Contact Me</h1>
                     <img src="contactme.svg" alt="Sorry Image Can't Load"
                         className="contactMeSvg" />
@@ -127,7 +127,7 @@ function ContactMe() {
                     </div>
                 </div>
 
-                <form className="contact-2 reveal-section" onSubmit={onSubmit} >
+                <form className="contact-2  " onSubmit={onSubmit} >
                     <div className='allFields'>
                         <label htmlFor="" className=''> Full name</label>
                         <input type="text" className="field fullname" placeholder="enter name"

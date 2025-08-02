@@ -49,7 +49,7 @@ function Skills() {
             <div className='grid grid-cols-3 md:grid-cols-5 xl:grid-cols-6 gap-5 w-[100%] ' >
               {section.skills.map((data) => (
                 <div
-                  className='bg-[#202022] border-2 border-[#2e2e2e] w-[27vw] md:w-[16vw] lg:h-[160px] lg:w-[12vw] text-center flex flex-col items-center justify-evenly p-2 rounded-[10px] gap-2 lg:gap-1 cursor-pointer hover:scale-105 hover:border-[#212121] hover:shadow-[0px_0px_20px_#2D2E38] transition-all reveal-section'
+                  className='bg-[#181818] border-2 border-[#2e2e2e] w-[27vw] md:w-[16vw] lg:h-[160px] lg:w-[12vw] text-center flex flex-col items-center justify-evenly p-2 rounded-[10px] gap-2 lg:gap-1 cursor-pointer hover:scale-105 hover:border-[#212121] hover:shadow-[0px_0px_20px_#1e1e1e] transition-all  '
                   key={data.id}
                 >
                   <img src={data.logo} alt={data.name} className='w-[55px]' />
