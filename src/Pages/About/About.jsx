@@ -4,7 +4,7 @@ function About() {
 
     return (
         <div className="w-full h-auto overflow-x-hidden overflow-y-hidden flex gap-5 flex-col md:flex-row items-center justify-center px-[50px] py-[10vh] pb-[50px] relative mt-0 md:mt-[50px]">
-            <div className=' flex flex-col md:flex-row gap-5 md:gap-0 xl:gap-5 lg::h-[75vh] '>
+            <div className=' flex flex-col-reverse md:flex-row gap-5 md:gap-0 xl:gap-5 lg::h-[75vh] '>
                 <div className="flex flex-col gap-5 w-full px-2 md:w-[48vw] xl:w-[43vw] ">
                     {/* <img
                     src="/aboutPageImg.jpg"
