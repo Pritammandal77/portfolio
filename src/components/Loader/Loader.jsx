@@ -4,7 +4,7 @@ import './Loader.css'
 function Loader() {
     return (
         <>
-            <div className='loaderBody'>
+            <div className='loaderBody w-full h-screen absolute top-0'>
                 <div className="loader">
                     <div class="bar1"></div>
                     <div class="bar2"></div>
