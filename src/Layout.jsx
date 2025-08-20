@@ -8,8 +8,6 @@ import { useRevealAnimation } from './hooks/useRevealAnimation';
 
 function Layout() {
 
-  useRevealAnimation()
-
   return (
     <>
       <ScrollToTop />
