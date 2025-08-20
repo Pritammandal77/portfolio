@@ -1,25 +1,22 @@
-import React, { useEffect } from 'react';
-import './ContactMe.css';
-import { useRef } from 'react';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-import Swal from 'sweetalert2'
-import { useState } from 'react';
-import Loader from '../../components/Loader/Loader';
-import { toast } from 'sonner';
-import MotionWrapper from '../../hooks/MotionWrapper';
+import { toast } from "sonner";
+import Loader from "../../components/Loader/Loader";
+import MotionWrapper from "../../hooks/MotionWrapper";
+import './ContactMe.css'
+import '../Home/Home.css'
 
 function ContactMe() {
-
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(false);
 
     const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+
     const onSubmit = async (event) => {
         try {
             event.preventDefault();
-            setIsLoading(true)
+            setIsLoading(true);
             const formData = new FormData(event.target);
 
             formData.append("access_key", accessKey);
@@ -31,62 +28,41 @@ function ContactMe() {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    Accept: "application/json"
+                    Accept: "application/json",
                 },
-                body: json
+                body: json,
             }).then((res) => res.json());
 
             if (res.success) {
-                toast.success("Message submitted successfully")
+                toast.success("Message submitted successfully");
             }
-            setIsLoading(false)
+            setIsLoading(false);
         } catch (error) {
-            toast.error("Something went wrong")
+            toast.error("Something went wrong");
         }
-
     };
-
-
-    // useEffect(() => {
-    //     gsap.utils.toArray(". ").forEach((el) => {
-    //         gsap.fromTo(
-    //             el,
-    //             {
-    //                 y: 100,
-    //                 opacity: 0,
-    //                 scale: 0.9,
-    //             },
-    //             {
-    //                 y: 0,
-    //                 opacity: 1,
-    //                 scale: 1,
-    //                 duration: 1,
-    //                 ease: "power3.out",
-    //                 scrollTrigger: {
-    //                     trigger: el,
-    //                     start: "top 85%",
-    //                     toggleActions: "play none none reverse",
-    //                 },
-    //             }
-    //         );
-    //     });
-    // }, []);
-
 
     return (
         <>
-            <div className='loaderInContactUs absolute top-0'>
-                {
-                    isLoading && <Loader />
-                }
+            <div className="absolute top-0 z-[100]">
+                {isLoading && <Loader />}
             </div>
-            <section className="ContactContainer overflow-x-hidden overflow-y-hidden relative">
-                <MotionWrapper direction='-x'>
-                    <div className="w-full xl:w-[45vw] h-full flex flex-col items-center justify-center gap-10">
-                        <h1 className="text-[40px] lg:text-[50px] font-semibold text-center mb-[60px] text-[#e7e7e7] russo-one-regular">Contact Me</h1>
-                        <img src="contactme.svg" alt="Sorry Image Can't Load"
-                            className="contactMeSvg" />
-                        <div className="social-buttons contactSocialBtn flex items-center justify-center">
+
+            <section className="flex h-auto w-full flex-col lg:gap-10  xl:gap-4 justify-center md:flex-row overflow-hidden relative p-2 md:p-12">
+                {/* Left Side */}
+                <MotionWrapper direction="-x">
+                    <div className="hidden md:w-full xl:w-[30vw] h-full xl:p-10 lg:flex flex-col items-center justify-center gap-10 xl:bg-[#111111] xl:border-1 xl:border-[#1e1e1e]">
+                        <h1 className="text-4xl lg:text-5xl font-semibold text-center mb-14 text-gray-200 russo-one-regular">
+                            Contact Me
+                        </h1>
+
+                        <img
+                            src="contactme.svg"
+                            alt="Sorry Image Can't Load"
+                            className="h-52"
+                        />
+
+                        <div className="social-buttons relative top-5 flex flex-col items-center justify-center gap-5">
                             <div className="socialIcons">
                                 <a href="https://github.com/Pritammandal77" className="social-button github" target="_blank">
                                     <svg className="cf-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="-2.5 0 19 19"><path d="M9.464 17.178a4.506 4.506 0 0 1-2.013.317 4.29 4.29 0 0 1-2.007-.317.746.746 0 0 1-.277-.587c0-.22-.008-.798-.012-1.567-2.564.557-3.105-1.236-3.105-1.236a2.44 2.44 0 0 0-1.024-1.348c-.836-.572.063-.56.063-.56a1.937 1.937 0 0 1 1.412.95 1.962 1.962 0 0 0 2.682.765 1.971 1.971 0 0 1 .586-1.233c-2.046-.232-4.198-1.023-4.198-4.554a3.566 3.566 0 0 1 .948-2.474 3.313 3.313 0 0 1 .091-2.438s.773-.248 2.534.945a8.727 8.727 0 0 1 4.615 0c1.76-1.193 2.532-.945 2.532-.945a3.31 3.31 0 0 1 .092 2.438 3.562 3.562 0 0 1 .947 2.474c0 3.54-2.155 4.32-4.208 4.548a2.195 2.195 0 0 1 .625 1.706c0 1.232-.011 2.227-.011 2.529a.694.694 0 0 1-.272.587z"></path></svg>
@@ -116,7 +92,7 @@ function ContactMe() {
                                 </a>
                             </div>
 
-                            <a href='/PritamMandal_FrontendDeveloper.pdf' download="PritamMandal_FrontendDeveloper.pdf">
+                            <a href='/PritamMandal_FullstackDeveloper.pdf' download="PritamMandal_FullstackDeveloper.pdf">
                                 <button className="button">
                                     <div className="ui">Download</div> CV
                                 </button>
@@ -125,36 +101,66 @@ function ContactMe() {
                     </div>
                 </MotionWrapper>
 
-                <MotionWrapper direction='x'>
-                    <form className="contact-2 " onSubmit={onSubmit}>
-                        <div className='allFields'>
-                            <label htmlFor="" className=''> Full name</label>
-                            <input type="text" className="field fullname" placeholder="enter name"
-                                name='name' required />
-                        </div>
-                        <div className='allFields'>
-                            <label htmlFor="">Email address</label>
-                            <input type="text" className="field email" placeholder="enter email"
-                                name='email' required />
-                        </div>
-                        <div className='allFields'>
-                            <label htmlFor="">Your message</label>
-                            <textarea name="message" id="" placeholder='enter message'
-                                className="field textArea" required></textarea>
+                {/* Right Side */}
+                <MotionWrapper direction="x">
+                    <form
+                        onSubmit={onSubmit}
+                        className="w-full md:w-[90vw] py-10 pt-5 h-full lg:w-[45vw] flex flex-col gap-6 p-2 md:pt-16 xl:p-7 xl:pb-10  xl:bg-[#111111] xl:border xl:border-[#1e1e1e] rounded-lg"
+                    >
+                        <h1 className="lg:hidden text-4xl lg:text-5xl font-semibold text-center text-purple-400 russo-one-regular">Contact Me</h1>
+                        {/* Full Name */}
+                        <div className="flex flex-col gap-2 w-full">
+                            <label className="text-lg text-purple-400">Full name</label>
+                            <input
+                                type="text"
+                                name="name"
+                                required
+                                placeholder="Enter name"
+                                className="w-full h-10 rounded-lg bg-[#181818] px-3 text-white placeholder-gray-500 focus:outline-none"
+                            />
                         </div>
 
-                        {/* <button type="Submit" className='submitButton'>Send Message</button> */}
-                        <button className="submitButton" type="Submit">
-                            Send Message
+                        {/* Email */}
+                        <div className="flex flex-col gap-2 w-full">
+                            <label className="text-lg text-purple-400">Email address</label>
+                            <input
+                                type="email"
+                                name="email"
+                                required
+                                placeholder="Enter email"
+                                className="w-full h-10 rounded-lg bg-[#181818] px-3 text-white placeholder-gray-500 focus:outline-none"
+                            />
+                        </div>
+
+                        {/* Message */}
+                        <div className="flex flex-col gap-2 w-full">
+                            <label className="text-lg text-purple-400">Your message</label>
+                            <textarea
+                                name="message"
+                                required
+                                placeholder="Enter message"
+                                className="w-full h-40 rounded-lg bg-[#181818] px-3 py-2 text-white placeholder-gray-500 focus:outline-none resize-none"
+                            />
+                        </div>
+
+                        {/* Button */}
+                        <button
+                            type="submit"
+                            className="submitButton self-center md:self-start relative min-h-[50px] w-[150px] cursor-pointer px-4 py-2 text-lg font-semibold text-purple-500 border-2 border-purple-500 rounded-xl transition-all duration-300 overflow-hidden hover:scale-105 hover:text-black hover:shadow-[0px_0px_20px_#a75dd6] active:scale-100"
+                        >
+                            <span className="relative z-10">Send Message</span>
+                            <span className="absolute inset-0 scale-0 bg-purple-500 rounded-xl transition-transform duration-500 ease-in-out hover:scale-150 z-0"></span>
                         </button>
+                        
                     </form>
                 </MotionWrapper>
 
 
-                <div className="absolute w-[200px] h-[200px] bg-blue-700 opacity-30 rounded-full blur-[150px] top-[10%] left-[10%]" />
-                <div className="absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[40%] left-[70%]" />
+                {/* Blurred Background Circles */}
+                <div className="hidden md:inline absolute w-[200px] h-[200px] bg-blue-700 opacity-30 rounded-full blur-[150px] top-[10%] left-[10%]" />
+                <div className="hidden md:inline absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[40%] left-[70%]" />
+                <div className="hidden absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[70%] left-[10%]" />
                 <div className="md:hidden absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[70%] left-[10%]" />
-
             </section>
         </>
     );

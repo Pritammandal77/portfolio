@@ -27,7 +27,7 @@ const MotionWrapper = ({ children, delay = 0, direction = "y" }) => {
       initial={{ opacity: 0, ...initialPos }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once: false, amount: 0.2 }}
-      transition={{ duration: 0.6, ease: "easeOut", delay }}
+      transition={{ duration: 0.9, ease: "easeOut", delay }}
     >
       {children}
     </motion.div>
