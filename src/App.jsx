@@ -4,7 +4,7 @@ import MainBody from './components/MainBody/MainBody'
 import Projects from './Pages/Projects/Projects'
 import Skills from './Pages/Skills/Skills'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Layout from './Layout'
+import Layout from './Layout.jsx'
 import About from './Pages/About/About'
 import { useEffect } from 'react'
 import Lenis from "Lenis"
