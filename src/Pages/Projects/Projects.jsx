@@ -13,8 +13,9 @@ const projectsData = [
         image: "devstackr.jpg",
         skills: ["React.js", "Redux Toolkit", "Node.js", "Express.js", "MongoDB", "socket.io"],
         liveLink: "https://devstackr.netlify.app",
-        githubLink: "https://github.com/Pritammandal77/E-Commerce",
-        direction: '-x'
+        githubLink: "https://github.com/Pritammandal77/devstackr-frontend",
+        githubLink2: "https://github.com/Pritammandal77/devstackr-backend",
+        direction: 'y'
     },
     {
         title: "Career Website",
@@ -23,7 +24,7 @@ const projectsData = [
         skills: ["React.js", "CSS", "Tailwind CSS", "App Script", "GSAP"],
         liveLink: "https://career.gharpadharo.com",
         githubLink: "https://github.com/Pritammandal77/E-Commerce",
-        direction: 'x'
+        direction: 'y'
     },
     {
         title: "E-Commerce",
@@ -32,7 +33,7 @@ const projectsData = [
         skills: ["React.js", "Redux Toolkit", "Tailwind css", "Firebase"],
         liveLink: "https://the-aura-mart.netlify.app",
         githubLink: "https://github.com/Pritammandal77/E-Commerce",
-        direction: '-x'
+        direction: 'y'
     },
     {
         title: "Zeno AI",
@@ -41,7 +42,7 @@ const projectsData = [
         skills: ["React.js", "redux toolkit", "tailwind css"],
         liveLink: "https://the-zeno-ai.netlify.app/",
         githubLink: "https://github.com/Pritammandal77/Zeno-AI",
-        direction: 'x'
+        direction: 'y'
     },
     {
         title: "Recipe Gram",
@@ -50,7 +51,7 @@ const projectsData = [
         skills: ["React.js", "Vanila CSS", "Context API"],
         liveLink: "https://recipe-gram.netlify.app/",
         githubLink: "https://github.com/Pritammandal77/Recipe-App",
-        direction: '-x'
+        direction: 'y'
     },
     {
         title: "New Project coming soon",
@@ -58,8 +59,8 @@ const projectsData = [
         image: "/newProjectImg.jpeg",
         liveLink: "#",
         githubLink: "#",
-        direction: 'x'
-    }
+        direction: 'y'
+    }  
 ];
 
 function Projects() {
@@ -94,18 +95,25 @@ function Projects() {
                                     ))}
                                 </div>
                                 <div className='w-full flex justify-between'>
-                                    <button className="w-[49%] bg-[#9333EA] px-3 py-2 rounded-lg text-[16px] flex items-center justify-center gap-3">
+                                    <a href={project.liveLink} target="_blank" rel="noreferrer" className="w-[49%] bg-[#9333EA] px-3 py-2 rounded-lg text-[16px] flex items-center justify-center gap-3">
                                         <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                                        <a href={project.liveLink} className="text-white" target="_blank" rel="noreferrer">
-                                            Live view
-                                        </a>
-                                    </button>
-                                    <button className='w-[49%] border border-[#4b4b4b] px-3 py-2 rounded-lg flex items-center justify-center gap-3'>
+                                        Live view
+                                    </a>
+                                    <a href={project.githubLink} target='_blank' rel="noreferrer" className={` ${ project.githubLink2 ? "w-[24%]" : "w-[49%]"}  border border-[#4b4b4b] px-3 py-2 rounded-lg flex items-center justify-center gap-3`}>
                                         <i className="fa-brands fa-github"></i>
-                                        <a href={project.githubLink} target='_blank' rel="noreferrer" className='cursor-pointer text-white'>
-                                            Source code
+                                        <a href={project.githubLink} target='_blank' rel="noreferrer" className={`${ project.githubLink2 ? "hidden xl:inline" : "inline"}  cursor-pointer text-white`}>
+                                          { project.githubLink2 ? "Frontend code" : "Source code"}   
                                         </a>
-                                    </button>
+                                    </a>
+                                    {
+                                        project.githubLink2 &&
+                                        <a href={project.githubLink2} target='_blank' rel="noreferrer" className='ml-2 w-[24%] border border-[#4b4b4b] px-3 py-2 rounded-lg flex items-center justify-center gap-3'>
+                                            <i className="fa-brands fa-github"></i>
+                                            <a href={project.githubLink2} target='_blank' rel="noreferrer" className='hidden xl:inline cursor-pointer text-white'>
+                                                Backend code
+                                            </a>
+                                        </a>
+                                    }
                                 </div>
                             </div>
                         </div>
