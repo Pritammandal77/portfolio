@@ -54,13 +54,22 @@ const projectsData = [
         direction: 'y'
     },
     {
-        title: "New Project coming soon",
-        description: "Something big is coming soon 🔥",
-        image: "/newProjectImg.jpeg",
-        liveLink: "#",
-        githubLink: "#",
+        title: "Club Website (GharPadharo)",
+        description: "It is the club website of GharPadharo (Zestos Ventures Pvt. Ltd.) , As part of my internship at Gharpadharo. I individually built their club website, where they can showcase their upcoming events , image gallery , CTA button , etc",
+        image: "/gharPadharoClub.png",
+        skills: ["React.js", "Tailwind CSS", "Framer Motion"],
+        liveLink: "https://club.gharpadharo.com",
+        githubLink: "https://github.com/Pritammandal77",
         direction: 'y'
-    }  
+    },
+    // {
+    //     title: "New Project coming soon",
+    //     description: "Something big is coming soon 🔥",
+    //     image: "/newProjectImg.jpeg",
+    //     liveLink: "#",
+    //     githubLink: "#",
+    //     direction: 'y'
+    // }  
 ];
 
 function Projects() {
