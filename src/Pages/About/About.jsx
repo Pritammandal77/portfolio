@@ -13,7 +13,7 @@ function About() {
                     className="w-[30vw] h-[90vh] rounded-2xl  "
                 /> */}
                     <MotionWrapper direction='-x'>
-                        <div className="bg-[#181818] w-[100%] p-[15px] rounded-[15px] border-2 border-[#2e2e2e] flex flex-col gap-[10px]">
+                        <div className="hidden md:flex flex-col gap-[10px] bg-[#181818] w-[100%] p-[15px] rounded-[15px] border-2 border-[#2e2e2e] ">
                             <h1 className="text-[35px] md:text-[40px] font-bold aladin-regular text-[#a75dd6]">Experience</h1>
 
                             <h2 className="text-[19px] text-[#a75dd6] russo-one-regular">

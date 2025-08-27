@@ -8,6 +8,7 @@ import Layout from './Layout.jsx'
 import About from './Pages/About/About'
 import { useEffect } from 'react'
 import Lenis from "Lenis"
+import Experience from './Pages/Experience/Experience.jsx'
  
 function App() {
  
@@ -19,6 +20,10 @@ function App() {
         {
           path: "/",
           element: <MainBody/>
+        },
+        {
+          path: "/experience",
+          element: <Experience />
         },
         {
           path: "/about",

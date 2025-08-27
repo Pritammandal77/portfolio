@@ -4,6 +4,7 @@ import Skills from '../../Pages/Skills/Skills';
 import Projects from '../../Pages/Projects/Projects';
 import ContactMe from '../../Pages/ContactMe/ContactMe';
 import Home from '../../Pages/Home/Home';
+import Experience from '../../Pages/Experience/Experience';
 
 function MainBody() {
   return (
@@ -13,6 +14,9 @@ function MainBody() {
       </section>
       <section id='about'>
         <About />
+      </section>
+      <section id='experience'>
+        <Experience />
       </section>
       <section id='skills'>
         <Skills />
