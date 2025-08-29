@@ -209,7 +209,7 @@ export default function TechStack() {
     ];
 
     return (
-        <div className="w-full h-[400px] px-5 py-30 md:h-[600px] flex items-center justify-center ">
+        <div className="w-full  h-auto px-5 py-10 md:h-auto md:py-20 xl:py-5 md:px-15 flex items-center justify-center ">
             <Cloud
                 options={{
                     clickToFront: 500,
