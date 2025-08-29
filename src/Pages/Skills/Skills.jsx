@@ -6,6 +6,7 @@ function Skills() {
     { id: 1, name: "HTML", logo: "https://img.icons8.com/color/480/html-5--v1.png" },
     { id: 2, name: "CSS", logo: "https://img.icons8.com/color/480/css3.png" },
     { id: 3, name: "JavaScript", logo: "https://img.icons8.com/color/480/javascript.png" },
+    { id: 7, name: "TypeScript", logo: "https://img.icons8.com/color/480/typescript.png" },
     { id: 4, name: "React.js", logo: "https://img.icons8.com/officel/480/react.png" },
     { id: 5, name: "Redux Toolkit", logo: "https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png" },
     { id: 6, name: "Tailwind CSS", logo: "https://img.icons8.com/color/480/tailwindcss.png" },
@@ -45,22 +46,29 @@ function Skills() {
 
       <div className='w-[100vw] xl:w-[90vw] h-auto rounded-3xl lg:px-10 flex flex-col gap-10'>
         {[{ title: "Frontend", skills: frontendSkills }, { title: "Backend", skills: backendSkills }, { title: "Tools", skills: tools }, { title: "Soft skills", skills: softSkills }].map((section, idx) => (
-          <MotionWrapper key={idx}>
-            <div className='flex flex-col gap-3 px-3 md:px-5' key={idx}>
+          <div className='flex flex-col gap-3 px-3 md:px-5' key={idx}>
               <h1 className='text-3xl md:text-4xl russo-one-regular text-gray-400'>{section.title}</h1>
-              <div className='grid grid-cols-3 md:grid-cols-5 xl:grid-cols-6 gap-5 w-[100%] ' >
+            <MotionWrapper key={idx}>
+              <div className='flex gap-5 flex-wrap w-[100%] ' >
                 {section.skills.map((data) => (
+                  // <div
+                  //   className='bg-[#181818] border-2 border-[#2e2e2e] w-[27vw] md:w-[16vw] lg:h-[160px] lg:w-[12vw] text-center flex flex-col items-center justify-evenly p-2 rounded-[10px] gap-2 lg:gap-1 cursor-pointer hover:scale-105 hover:border-[#212121] hover:shadow-[0px_0px_20px_#1e1e1e] transition-all  '
+                  //   key={data.id}
+                  // >
+                  //   <img src={data.logo} alt={data.name} className='w-[55px]' />
+                  //   <p className='text-[13px] md:text-[17px]'>{data.name}</p>
+                  // </div>
                   <div
-                    className='bg-[#181818] border-2 border-[#2e2e2e] w-[27vw] md:w-[16vw] lg:h-[160px] lg:w-[12vw] text-center flex flex-col items-center justify-evenly p-2 rounded-[10px] gap-2 lg:gap-1 cursor-pointer hover:scale-105 hover:border-[#212121] hover:shadow-[0px_0px_20px_#1e1e1e] transition-all  '
+                    className='bg-[#181818] border-2 border-[#2e2e2e] w-auto h-15 text-center flex items-center justify-evenly p-2 xl:px-3 rounded-[10px] gap-2 lg:gap-1 cursor-pointer hover:scale-105 hover:border-[#212121] hover:shadow-[0px_0px_20px_#1e1e1e] transition-all  '
                     key={data.id}
                   >
-                    <img src={data.logo} alt={data.name} className='w-[55px]' />
-                    <p className='text-[13px] md:text-[17px]'>{data.name}</p>
+                    <img src={data.logo} alt={data.name} className='w-[30px] md:w-[35px]' />
+                    <p className='text-[15px] md:text-[17px]'>{data.name}</p>
                   </div>
                 ))}
               </div>
-            </div>
-          </MotionWrapper>
+            </MotionWrapper>
+          </div>
         ))}
       </div>
 

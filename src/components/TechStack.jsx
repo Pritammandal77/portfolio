@@ -1,3 +1,84 @@
+import { Cloud, renderSimpleIcon } from "react-icon-cloud";
+import {
+    siReact,
+    siNodedotjs,
+    siMongodb,
+    siMongoose,
+    siHtml5,
+    siJavascript,
+    siTypescript,
+    siTailwindcss,
+    siExpress,
+    siGit,
+    siGithub,
+    siVercel,
+    siNetlify,
+    siPostman,
+    siRedux,
+    siBootstrap,
+    siPython,
+    siMysql,
+    siLinux,
+    siRender, 
+} from "simple-icons/icons";
+
+export default function TechStack() {
+    const icons = [
+        renderSimpleIcon({ icon: siReact, size: 45 }),
+        renderSimpleIcon({ icon: siNodedotjs, size: 45 }),
+        renderSimpleIcon({ icon: siMongodb, size: 45 }),
+        renderSimpleIcon({ icon: siMongoose, size: 45 }),
+        renderSimpleIcon({ icon: siHtml5, size: 45 }),
+        renderSimpleIcon({ icon: siJavascript, size: 45 }),
+        renderSimpleIcon({ icon: siTypescript, size: 45 }),
+        renderSimpleIcon({ icon: siTailwindcss, size: 45 }),
+        renderSimpleIcon({ icon: { ...siExpress, hex: "#FFFFFF" }, size: 45 }),
+        renderSimpleIcon({ icon: siGit, size: 45 }),
+        renderSimpleIcon({ icon: siRedux, size: 45 }),
+        renderSimpleIcon({ icon: siPostman, size: 45 }),
+        renderSimpleIcon({ icon: siVercel, size: 45 }),
+        renderSimpleIcon({ icon: siNetlify, size: 45 }),
+        renderSimpleIcon({ icon: siBootstrap, size: 45 }),
+        renderSimpleIcon({ icon: siPython, size: 45 }),
+        renderSimpleIcon({ icon: siMysql, size: 45 }),
+        renderSimpleIcon({ icon: siLinux, size: 45 }),
+        renderSimpleIcon({ icon: { ...siGithub, hex: "#FFFFFF" }, size: 45, }),
+        renderSimpleIcon({ icon: { ...siRender, hex: "#FFFFFF" }, size: 45, }),
+    ];
+
+    return (
+        <div className="w-full  h-auto px-5 py-10 md:h-auto md:py-20 xl:py-5 md:px-15 flex items-center justify-center ">
+            <Cloud
+                options={{
+                    clickToFront: 500,
+                    depth: 1,
+                    wheelZoom: false,
+                    imageScale: 2,
+                    activeCursor: "pointer",
+                    tooltip: "native",
+                    initial: [0.1, -0.1],
+                    reverse: true,
+                    dragControl: true,
+                    decel: 0.95,
+                    maxSpeed: 0.05,
+                    minSpeed: 0.01,
+                }}
+            >
+                {icons}
+            </Cloud>
+        </div>
+    );
+}
+
+
+
+
+
+
+
+
+
+// old codes 
 // import { Cloud, renderSimpleIcon } from "react-icon-cloud";
 // import { siReact, siNodedotjs, siMongodb } from "simple-icons/icons";
 
@@ -146,88 +227,3 @@
 //     );
 // }
 
-
-
-
-import { Cloud, renderSimpleIcon } from "react-icon-cloud";
-import {
-    siReact,
-    siNodedotjs,
-    siMongodb,
-    siMongoose,
-    siHtml5,
-    siJavascript,
-    siTypescript,
-    siTailwindcss,
-    siExpress,
-    siGit,
-    siGithub,
-    siVercel,
-    siNetlify,
-    siPostman,
-    siRedux,
-    siBootstrap,
-    siPython,
-    siMysql,
-    siLinux,
-    siRender, // ⚡ Render ka icon bhi import kar
-} from "simple-icons/icons";
-
-export default function TechStack() {
-    const icons = [
-        renderSimpleIcon({ icon: siReact, size: 45 }),
-        renderSimpleIcon({ icon: siNodedotjs, size: 45 }),
-        renderSimpleIcon({ icon: siMongodb, size: 45 }),
-        renderSimpleIcon({ icon: siMongoose, size: 45 }),
-        renderSimpleIcon({ icon: siHtml5, size: 45 }),
-        renderSimpleIcon({ icon: siJavascript, size: 45 }),
-        renderSimpleIcon({ icon: siTypescript, size: 45 }),
-        renderSimpleIcon({ icon: siTailwindcss, size: 45 }),
-        // ⚡ Express ko white banaya
-        renderSimpleIcon({ icon: { ...siExpress, hex: "#FFFFFF" }, size: 45 }),
-        renderSimpleIcon({ icon: siGit, size: 45 }),
-        renderSimpleIcon({ icon: siRedux, size: 45 }),
-        renderSimpleIcon({ icon: siPostman, size: 45 }),
-        renderSimpleIcon({ icon: siVercel, size: 45 }),
-        renderSimpleIcon({ icon: siNetlify, size: 45 }),
-        renderSimpleIcon({ icon: siBootstrap, size: 45 }),
-        renderSimpleIcon({ icon: siPython, size: 45 }),
-        renderSimpleIcon({ icon: siMysql, size: 45 }),
-        renderSimpleIcon({ icon: siLinux, size: 45 }),
-
-        // ⚡ White GitHub logo
-        renderSimpleIcon({
-            icon: { ...siGithub, hex: "#FFFFFF" },
-            size: 45,
-        }),
-
-        // ⚡ White Render logo
-        renderSimpleIcon({
-            icon: { ...siRender, hex: "#FFFFFF" },
-            size: 45,
-        }),
-    ];
-
-    return (
-        <div className="w-full  h-auto px-5 py-10 md:h-auto md:py-20 xl:py-5 md:px-15 flex items-center justify-center ">
-            <Cloud
-                options={{
-                    clickToFront: 500,
-                    depth: 1,
-                    wheelZoom: false,
-                    imageScale: 2,
-                    activeCursor: "pointer",
-                    tooltip: "native",
-                    initial: [0.1, -0.1],
-                    reverse: true,
-                    dragControl: true,
-                    decel: 0.95,
-                    maxSpeed: 0.05,
-                    minSpeed: 0.01,
-                }}
-            >
-                {icons}
-            </Cloud>
-        </div>
-    );
-}
