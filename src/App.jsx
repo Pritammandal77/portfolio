@@ -1,14 +1,14 @@
 import './App.css'
-import ContactMe from './Pages/ContactMe/ContactMe'
+import ContactMe from './Pages/ContactMe'
 import MainBody from './components/MainBody/MainBody'
-import Projects from './Pages/Projects/Projects'
-import Skills from './Pages/Skills/Skills'
+import Projects from './Pages/Projects.jsx'
+import Skills from './Pages/Skills.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Layout.jsx'
-import About from './Pages/About/About'
+import About from './Pages/About.jsx'
 import { useEffect } from 'react'
 import Lenis from "Lenis"
-import Experience from './Pages/Experience/Experience.jsx'
+import Experience from './Pages/Experience.jsx'
  
 function App() {
  

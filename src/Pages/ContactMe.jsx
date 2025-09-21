@@ -3,10 +3,10 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import { toast } from "sonner";
-import Loader from "../../components/Loader/Loader";
-import MotionWrapper from "../../hooks/MotionWrapper";
+import Loader from "../components/Loader/Loader";
 import './ContactMe.css'
-import '../Home/Home.css'
+import './Home.css'
+import MotionWrapper from "../hooks/MotionWrapper";
 
 function ContactMe() {
     const [isLoading, setIsLoading] = useState(false);

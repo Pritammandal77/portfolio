@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import MotionWrapper from '../../hooks/MotionWrapper';
+import MotionWrapper from '../hooks/MotionWrapper';
 gsap.registerPlugin(ScrollTrigger);
 
 const projectsData = [

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import MotionWrapper from '../../hooks/MotionWrapper';
+import MotionWrapper from '../hooks/MotionWrapper';
 
 function Skills() {
   const frontendSkills = [
@@ -45,6 +45,7 @@ function Skills() {
       <h1 className="text-[35px] lg:text-[50px] font-semibold text-center mb-[60px] text-[#e7e7e7] russo-one-regular">Skills & technologies</h1>
 
       <div className='w-[100vw] xl:w-[90vw] h-auto rounded-3xl lg:px-10 flex flex-col gap-10'>
+       
         {[{ title: "Frontend", skills: frontendSkills }, { title: "Backend", skills: backendSkills }, { title: "Tools", skills: tools }, { title: "Soft skills", skills: softSkills }].map((section, idx) => (
           <div className='flex flex-col gap-3 px-3 md:px-5' key={idx}>
               <h1 className='text-3xl md:text-4xl russo-one-regular text-gray-400'>{section.title}</h1>
@@ -63,13 +64,14 @@ function Skills() {
                     key={data.id}
                   >
                     <img src={data.logo} alt={data.name} className='w-[30px] md:w-[35px]' />
-                    <p className='text-[15px] md:text-[17px]'>{data.name}</p>
+                    <p className='text-[15px] md:text-[17px] xl:text-[18px]'>{data.name}</p>
                   </div>
                 ))}
               </div>
             </MotionWrapper>
           </div>
         ))}
+        
       </div>
 
       <div className="absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[20%] left-[10%]" />

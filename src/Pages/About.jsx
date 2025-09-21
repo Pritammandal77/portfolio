@@ -1,5 +1,5 @@
 import React from 'react';
-import MotionWrapper from '../../hooks/MotionWrapper';
+import MotionWrapper from '../hooks/MotionWrapper';
 
 function About() {
 

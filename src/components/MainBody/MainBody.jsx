@@ -1,11 +1,11 @@
 import React from 'react';
-import About from '../../Pages/About/About';
-import Skills from '../../Pages/Skills/Skills';
-import Projects from '../../Pages/Projects/Projects';
-import ContactMe from '../../Pages/ContactMe/ContactMe';
-import Home from '../../Pages/Home/Home';
-import Experience from '../../Pages/Experience/Experience';
-import TechStack from '../TechStack';
+import Home from '../../Pages/Home';
+import About from '../../Pages/About';
+import Experience from '../../Pages/Experience';
+import Skills from '../../Pages/Skills';
+import Projects from '../../Pages/Projects';
+import ContactMe from '../../Pages/ContactMe';
+
 
 function MainBody() {
   return (
@@ -22,9 +22,9 @@ function MainBody() {
       <section id='skills'>
         <Skills />
       </section>
-      <section id='techstack'>
+      {/* <section id='techstack'>
         <TechStack />
-      </section>
+      </section> */}
       <section id='projects'>
         <Projects />
       </section>

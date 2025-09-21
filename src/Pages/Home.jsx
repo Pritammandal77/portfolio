@@ -158,6 +158,7 @@ import './Home.css'
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import Aurora from '../utils/AuroraText';
 
 function Home() {
 
@@ -225,6 +226,9 @@ function Home() {
                             <h1 className="myName text-4xl md:text-6xl font-bold mb-4 text-[#9F4AEF] ">
                                 Pritam Mandal
                             </h1>
+                            {/* <h1 className='text-4xl md:text-6xl font-bold mb-4'>
+                                <Aurora text="Pritam Mandal" />
+                            </h1> */}
                             <h2 className="text-xl md:text-4xl font-medium text-[#D8B4FE] mb-6">
                                 FullStack Developer | BSc IT Student
                             </h2>
@@ -310,7 +314,7 @@ function Home() {
                 <div className='absolute bottom-35 left-12 lg:hidden opacity-25'>
                     <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/7950F2/star--v1.png" alt="star--v1" />
                 </div>
-                  <div className='absolute bottom-12 right-12 lg:hidden opacity-30'>
+                <div className='absolute bottom-12 right-12 lg:hidden opacity-30'>
                     <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/7950F2/star--v1.png" alt="star--v1" />
                 </div>
             </div>
