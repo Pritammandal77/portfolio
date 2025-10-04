@@ -293,8 +293,12 @@ function Home() {
                 </div>
 
                 <div className='w-full h-[30vh] homePic lg:w-[40vw] lg:h-full flex items-center justify-center relative xl:top-7'>
-                    <div className="bodyContainer2">
-                        <img src="/myNewDp.jpg" alt="Sorry The Image is Not Available"
+                    <div className=" hidden xl:inline">
+                        <img src="/myDPRotated.jpg" alt="Sorry The Image is Not Available"
+                            className="myImg" ref={myImgRef} />
+                    </div>
+                    <div className="xl:hidden">
+                        <img src="/myDP.jpg" alt="Sorry The Image is Not Available"
                             className="myImg" ref={myImgRef} />
                     </div>
                 </div>

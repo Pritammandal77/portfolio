@@ -4,6 +4,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import MotionWrapper from '../hooks/MotionWrapper';
+import ScaleWrapper from '../hooks/ScaleWrapper';
 gsap.registerPlugin(ScrollTrigger);
 
 const projectsData = [
@@ -47,7 +48,7 @@ const projectsData = [
     {
         title: "Recipe Gram",
         description: "It is a recipe App ,User can browse diffferent types of recipes ,can Search Recipes ,view The full detailed recipe with its Ingredients . Also can save Favourite Recipes on localStorage & Delete Recipes.",
-        image: "/recipeApp.jpg",
+        image: "https://imgs.search.brave.com/MlMyF6p_e6f8sCUB32EpZfxLX7WngSN8-5AX3SocTA8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNjI4/MDk1NjMyL3Bob3Rv/L3JlY2lwZS5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9M19q/Zm5zQTdTTTZxbW9h/bDJEV3lyeklLY25r/SHdkTXJodGpjS3Ni/QzZMYz0",
         skills: ["React.js", "Vanila CSS", "Context API"],
         liveLink: "https://recipe-gram.netlify.app/",
         githubLink: "https://github.com/Pritammandal77/Recipe-App",
@@ -78,7 +79,9 @@ function Projects() {
             <h1 className="text-[40px] lg:text-[50px] font-semibold text-center mb-[60px] text-[#e7e7e7] russo-one-regular">My Projects</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-[100%] md:w-[90vw] place-items-center">
                 {projectsData.map((project, index) => (
-                    <MotionWrapper key={index} direction={project.direction}>
+                    // <MotionWrapper key={index} direction={project.direction}>
+                    <ScaleWrapper key={index}>
+
                         <div
 
                             className="relative w-[90vw] md:w-[45vw] h-auto md:h-[auto] md:min-h-[64vh] lg:h-[50vh] xl:h-[75vh] bg-[#181818] border-1 border-[#303030] flex flex-col gap-3 rounded-lg cursor-pointer hover:shadow-[0_0_20px_#1f1f1f] hover:border-[#714f91] "
@@ -108,10 +111,10 @@ function Projects() {
                                         <i className="fa-solid fa-arrow-up-right-from-square"></i>
                                         Live view
                                     </a>
-                                    <a href={project.githubLink} target='_blank' rel="noreferrer" className={` ${ project.githubLink2 ? "w-[24%]" : "w-[49%]"}  border border-[#4b4b4b] px-3 py-2 rounded-lg flex items-center justify-center gap-3`}>
+                                    <a href={project.githubLink} target='_blank' rel="noreferrer" className={` ${project.githubLink2 ? "w-[24%]" : "w-[49%]"}  border border-[#4b4b4b] px-3 py-2 rounded-lg flex items-center justify-center gap-3`}>
                                         <i className="fa-brands fa-github"></i>
-                                        <a href={project.githubLink} target='_blank' rel="noreferrer" className={`${ project.githubLink2 ? "hidden xl:inline" : "inline"}  cursor-pointer text-white`}>
-                                          { project.githubLink2 ? "Frontend code" : "Source code"}   
+                                        <a href={project.githubLink} target='_blank' rel="noreferrer" className={`${project.githubLink2 ? "hidden xl:inline" : "inline"}  cursor-pointer text-white`}>
+                                            {project.githubLink2 ? "Frontend code" : "Source code"}
                                         </a>
                                     </a>
                                     {
@@ -126,7 +129,8 @@ function Projects() {
                                 </div>
                             </div>
                         </div>
-                    </MotionWrapper>
+                    </ScaleWrapper>
+                    // </MotionWrapper>
                 ))}
             </div>
 
