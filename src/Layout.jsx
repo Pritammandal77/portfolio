@@ -3,7 +3,7 @@ import Header from './components/Header/Header';
 import { Outlet } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 import MainBody from './components/MainBody/MainBody';
-import ScrollToTop from './scrollToTop';
+import ScrollToTop from './scrollToTop.jsx';
 import { useRevealAnimation } from './hooks/useRevealAnimation';
 
 function Layout() {
