@@ -7,19 +7,19 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Layout.jsx'
 import About from './Pages/About.jsx'
 import { useEffect } from 'react'
-// import Lenis from "Lenis"
 import Experience from './Pages/Experience.jsx'
- 
+import ReactLenis from 'lenis/react'
+
 function App() {
- 
+
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Layout/>,
+      element: <Layout />,
       children: [
         {
           path: "/",
-          element: <MainBody/>
+          element: <MainBody />
         },
         {
           path: "/experience",
@@ -31,33 +31,33 @@ function App() {
         },
         {
           path: "/skills",
-          element: <Skills/>
+          element: <Skills />
         },
         {
           path: "/projects",
-          element: <Projects/>
+          element: <Projects />
         },
         {
           path: "/contactme",
-          element: <ContactMe/>
+          element: <ContactMe />
         }
       ]
     },
   ]);
 
-  // useEffect(() => {
-  //   const lenis = new Lenis();
-  //   function raf(time = any){
-  //     lenis.raf(time)
-  //     requestAnimationFrame(raf)
-  //   }
-  //   requestAnimationFrame(raf)
-  // }, []);
-
 
   return (
     <>
+      <ReactLenis
+       root 
+       options={{
+        lerp: 0.1,
+        duration: 1.4,
+        orientation: 'vertical'
+       }}
+      >
         <RouterProvider router={router} />
+      </ReactLenis>
     </>
   )
 }
