@@ -4,7 +4,7 @@ import MotionWrapper from "../hooks/MotionWrapper";
 
 const GithubContribution = () => {
     return (
-        <section className="w-full py-20 xl:py-28 px-5 md:px-16 relative flex items-center justify-center">
+        <section className="w-full py-20 xl:py-28 px-2 md:px-16 relative flex items-center justify-center overflow-x-hidden">
 
             <div className="z-10 absolute w-[200px] h-[200px] bg-blue-700 opacity-30 rounded-full blur-[150px] top-[10%] left-[10%]" />
             <div className="z-10 absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[130px] bottom-[10%] left-[70%]" />
@@ -45,7 +45,7 @@ const GithubContribution = () => {
 
                 <ScaleWrapper>
                     {/* Contribution Card */}
-                    <div className="bg-[#181818] border border-[#2e2e2e] flex flex-col items-center justify-center gap-8 rounded-2xl p-6 md:p-10 transition-all duration-300">
+                    <div className="bg-[#181818] border border-[#2e2e2e] flex flex-col items-center justify-center gap-8 rounded-2xl p-2 py-6 md:p-10 transition-all duration-300">
 
                         {/* Contribution Chart */}
                         <div className="overflow-x-auto w-full flex items-center justify-center">
@@ -58,7 +58,7 @@ const GithubContribution = () => {
 
 
                         {/* Legend */}
-                        <div className="flex justify-center gap-6 mt-6 text-sm text-gray-400 flex-wrap">
+                        <div className="flex justify-center gap-6 mt-6 text-sm text-gray-400 flex-wrap ">
                             <span className="flex items-center gap-2">
                                 <span className="w-3 h-3 bg-[#FFFFFF] rounded-sm border border-gray-500"></span>
                                 Off Days
