@@ -5,6 +5,7 @@ import Experience from '../../Pages/Experience';
 import Skills from '../../Pages/Skills';
 import Projects from '../../Pages/Projects';
 import ContactMe from '../../Pages/ContactMe';
+import { WobbleCard } from '../ui/WobbleCard';
 
 
 function MainBody() {
@@ -13,6 +14,9 @@ function MainBody() {
       <section id="home">
         <Home/>
       </section>
+      {/* <section id='about'>
+        <WobbleCard />
+      </section> */}
       <section id='about'>
         <About />
       </section>
