@@ -6,13 +6,14 @@ import Skills from '../../Pages/Skills';
 import Projects from '../../Pages/Projects';
 import ContactMe from '../../Pages/ContactMe';
 import { WobbleCard } from '../ui/WobbleCard';
+import GithubContribution from '../../Pages/GithubContribution';
 
 
 function MainBody() {
   return (
     <>
       <section id="home">
-        <Home/>
+        <Home />
       </section>
       {/* <section id='about'>
         <WobbleCard />
@@ -26,11 +27,11 @@ function MainBody() {
       <section id='skills'>
         <Skills />
       </section>
-      {/* <section id='techstack'>
-        <TechStack />
-      </section> */}
       <section id='projects'>
         <Projects />
+      </section>
+      <section id='github-contribution'>
+        <GithubContribution />
       </section>
       <section id='contactme'>
         <ContactMe />
