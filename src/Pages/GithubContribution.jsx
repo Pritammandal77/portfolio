@@ -34,8 +34,8 @@ const GithubContribution = () => {
                             <div
                                 className="bg-[#181818] border border-[#2e2e2e] rounded-xl p-5 text-center hover:border-purple-500 transition"
                             >
-                                <p className="text-sm text-gray-400">{item.title}</p>
-                                <p className="text-lg text-purple-500 mt-1 font-bold">
+                                <p className="text-md text-gray-400 font-bold">{item.title}</p>
+                                <p className="text-3xl text-purple-500 mt-1 font-bold aladin-regular">
                                     {item.value}
                                 </p>
                             </div>
