@@ -8,6 +8,7 @@ function Skills() {
     { id: 3, name: "JavaScript", logo: "https://img.icons8.com/color/480/javascript.png" },
     { id: 7, name: "TypeScript", logo: "https://img.icons8.com/color/480/typescript.png" },
     { id: 4, name: "React.js", logo: "https://img.icons8.com/officel/480/react.png" },
+    { id: 27, name: "Next.js", logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" },
     { id: 5, name: "Redux Toolkit", logo: "https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png" },
     { id: 6, name: "Tailwind CSS", logo: "https://img.icons8.com/color/480/tailwindcss.png" },
   ];
@@ -16,7 +17,7 @@ function Skills() {
     { id: 7, name: "Node.js", logo: "https://img.icons8.com/color/480/nodejs.png" },
     { id: 8, name: "Express.js", logo: "https://img.icons8.com/nolan/64/express-js.png" },
     { id: 9, name: "MongoDB", logo: "https://img.icons8.com/color/480/mongodb.png" },
-    { id: 10, name: "Mongoose", logo: "https://mongoosejs.com/docs/images/mongoose5_62x30_transparent.png" },
+    { id: 10, name: "Mongoose", logo: "https://img.icons8.com/color/480/mongodb.png" },
     { id: 11, name: "Firebase", logo: "https://img.icons8.com/color/480/firebase.png" },
     { id: 18, name: "REST API", logo: "/api.png" },
   ];
@@ -27,7 +28,9 @@ function Skills() {
     { id: 16, name: "Postman", logo: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/480/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png" },
     { id: 17, name: "VS Code", logo: "https://img.icons8.com/color/480/visual-studio-code-2019.png" },
     { id: 12, name: "Vercel", logo: "https://img.icons8.com/ios-filled/500/vercel.png" },
-    { id: 13, name: "Netlify", logo: "https://seeklogo.com/images/N/netlify-logo-758722CDF4-seeklogo.com.png" },
+    { id: 13, name: "Netlify", logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/netlify/netlify-original.svg" },
+    { id: 26, name: "Render" }
+
   ];
 
   const softSkills = [
@@ -45,10 +48,10 @@ function Skills() {
       <h1 className="text-[35px] lg:text-[50px] font-semibold text-center mb-[60px] text-[#e7e7e7] russo-one-regular">Skills & technologies</h1>
 
       <div className='w-[100vw] xl:w-[90vw] h-auto rounded-3xl lg:px-10 flex flex-col gap-10'>
-       
+
         {[{ title: "Frontend", skills: frontendSkills }, { title: "Backend", skills: backendSkills }, { title: "Tools", skills: tools }, { title: "Soft skills", skills: softSkills }].map((section, idx) => (
           <div className='flex flex-col gap-3 px-3 md:px-5' key={idx}>
-              <h1 className='text-3xl md:text-4xl russo-one-regular text-gray-400'>{section.title}</h1>
+            <h1 className='text-3xl md:text-4xl russo-one-regular text-gray-400'>{section.title}</h1>
             <MotionWrapper key={idx}>
               <div className='flex gap-5 flex-wrap w-[100%] ' >
                 {section.skills.map((data) => (
@@ -71,7 +74,7 @@ function Skills() {
             </MotionWrapper>
           </div>
         ))}
-        
+
       </div>
 
       <div className="absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[20%] left-[10%]" />
