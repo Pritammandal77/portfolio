@@ -7,7 +7,7 @@ function Footer() {
                 <div className="container mx-auto  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-15 md:w-[90vw] xl:w-[100vw]">
                     <div className="flex flex-col gap-2">
                         <div className="flex items-center space-x-2">
-                            <h1 className="text-4xl  text-purple-500">
+                            <h1 className="text-4xl applyFontBold text-purple-500 protest-revolution-regular">
                                 Pritam Mandal
                             </h1>
                         </div>
@@ -19,7 +19,7 @@ function Footer() {
                         <div className="flex gap-3 pt-2">
                             <div className="flex gap-5 text-2xl">
                                 <a
-                                    href="https://www.instagram.com/your_username"
+                                    href="https://www.instagram.com/pritam_mandal_77/profilecard/?igsh=MWE5cXF5ZGpxam84eA=="
                                     target="_blank"
                                     className="text-[#E4405F]"
                                 >
@@ -27,7 +27,7 @@ function Footer() {
                                 </a>
 
                                 <a
-                                    href="https://x.com/your_username"
+                                    href="https://x.com/pritam_mandal77"
                                     target="_blank"
                                     className="text-black dark:text-white"
                                 >
@@ -35,7 +35,7 @@ function Footer() {
                                 </a>
 
                                 <a
-                                    href="https://www.linkedin.com/in/your_username"
+                                    href="https://www.linkedin.com/in/pritam-mandal-871510281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                                     target="_blank"
                                     className="text-[#0A66C2]"
                                 >
@@ -48,32 +48,32 @@ function Footer() {
 
                     { }
                     <div className="flex flex-col gap-3 xl:pl-5">
-                        <h2 className="text-2xl text-gray-100">
+                        <h2 className="text-2xl applyFontBold text-gray-100">
                             Quick Links
                         </h2>
-                        <ol className="flex flex-col gap-2">
-                            <a href="#home">Home</a>
+                        <ol className="flex flex-col gap-2 text-[17px]">
+                            <a href="#home" className="hover:text-purple-500 ">Home</a>
                             <li>
-                                <a href="#about">About</a>
+                                <a href="#about" className="hover:text-purple-500">About</a>
                             </li>
                             <li>
-                                <a href="#skills">Skills</a>
+                                <a href="#skills" className="hover:text-purple-500">Skills</a>
                             </li>
                             <li>
-                                <a href="#projects">Projects</a>
+                                <a href="#projects" className="hover:text-purple-500">Projects</a>
                             </li>
                             <li>
-                                <a href="#contactme">Contact Me</a>
+                                <a href="#contactme" className="hover:text-purple-500">Contact Me</a>
                             </li>
                         </ol>
                     </div>
 
                     { }
                     <div className="flex flex-col gap-3">
-                        <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                        <h3 className="text-2xl applyFontBold text-gray-900 dark:text-gray-100">
                             My Services
                         </h3>
-                        <ol className="flex flex-col gap-2">
+                        <ol className="flex flex-col gap-2 text-[17px]">
                             <li>Frontend Development</li>
                             <li>Backend Development</li>
                             <li>FullStack Web Apps</li>
@@ -82,19 +82,19 @@ function Footer() {
                     </div>
 
                     { }
-                    <div className="flex flex-col gap-2">
-                        <h3 className="text-2xl font-bold text-gray-100">
-                            Contact Me
+                    <div className="flex flex-col gap-2 text-[17px]">
+                        <h3 className="text-2xl applyFontBold text-gray-100">
+                            Contacts
                         </h3>
-                        <p className="text-gray-300">
-                            Chandrapur Maharashtra, India
-                        </p>
-                        <p className="text-gray-300">
-                            Email: pritampmandal@gmail.com
+                        <p className='text-[17px]'>
+                            <a href="mailto:pritampmandal@gmail.com">
+                                <span className='text-purple-500 text-[17px] pr-3'>Email </span>
+                                 pritampmandal@gmail.com
+                            </a>
                         </p>
 
-                        <p>Phone</p>
-                        <div className="flex flex-col text-gray-300 text-[14px]">
+                        <div className="flex items-center gap-4 text-gray-300 text-[16px]">
+                            <p className='text-purple-500 text-[17px]'>Phone</p>
                             <a href="tel:+917720803593">+91 98812 28004</a>
                         </div>
                     </div>
@@ -102,7 +102,7 @@ function Footer() {
 
                 { }
                 <div className="text-center w-[80vw] text-gray-400 text-sm pt-10  border-t border-[#1e1e1e]">
-                    <p>Made with ❤️ by Pritam</p>  
+                    <p>Made with ❤️ by Pritam</p>
                 </div>
             </footer>
         </>
