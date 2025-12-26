@@ -306,7 +306,7 @@ function Home() {
                 <div className="absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[10%] left-[10%]" />
                 <div className="absolute w-[200px] h-[200px] bg-blue-700 opacity-30 rounded-full blur-[150px] top-[70%] left-[70%]" />
 
-                <div className='absolute top-25 left-10 lg:hidden opacity-30'>
+                {/* <div className='absolute top-25 left-10 lg:hidden opacity-30'>
                     <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/7950F2/star--v1.png" alt="star--v1" />
                 </div>
                 <div className='absolute top-80 right-10 lg:hidden opacity-20'>
@@ -320,7 +320,7 @@ function Home() {
                 </div>
                 <div className='absolute bottom-12 right-12 lg:hidden opacity-30'>
                     <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/7950F2/star--v1.png" alt="star--v1" />
-                </div>
+                </div> */}
             </div>
 
         </>
