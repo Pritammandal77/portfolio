@@ -47,7 +47,7 @@ function ContactMe() {
             <div className="absolute top-0 z-[100]">
                 {isLoading && <Loader />}
             </div>
-            <section className="flex items-center justify-center py-15 ">
+            <section className="flex items-center justify-center py-15 relative">
                 <div className="flex w-full flex-col lg:gap-10 xl:gap-4 justify-center md:flex-row overflow-hidden relative p-2 md:p-12">
                     {/* Left Side */}
                     <MotionWrapper direction="-x">
