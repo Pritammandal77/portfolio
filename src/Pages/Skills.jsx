@@ -29,7 +29,7 @@ function Skills() {
     { id: 17, name: "VS Code", logo: "https://img.icons8.com/color/480/visual-studio-code-2019.png" },
     { id: 12, name: "Vercel", logo: "https://img.icons8.com/ios-filled/500/vercel.png" },
     { id: 13, name: "Netlify", logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/netlify/netlify-original.svg" },
-    { id: 26, name: "Render" }
+    { id: 26, name: "Render" , logo : "/RenderLogo.webp"}
 
   ];
 

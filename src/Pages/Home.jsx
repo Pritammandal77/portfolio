@@ -159,6 +159,7 @@ import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import Aurora from '../utils/AuroraText';
+import LightRays from '../components/LightRays/LightRays';
 
 function Home() {
 
@@ -218,7 +219,7 @@ function Home() {
         <>
             <div className='new-home h-auto md:h-[100vh] pt-13 md:pt-0 xl:h-[100vh] w-[100vw] overflow-x-hidden overflow-y-hidden relative lg:top-25 xl:top-0 flex flex-col-reverse xl:flex-row newHome items-center justify-center'>
 
-                <div className='w-full h-auto lg:w-[60vw] lg:h-full flex items-center justify-center'>
+                <div className='z-10 w-full h-auto lg:w-[60vw] lg:h-full flex items-center justify-center'>
 
                     <div className="max-w-3xl md:h-[55vh] text-center homeData relative xl:top-7" ref={positionRef}>
                         <div className='myIntroDiv'>
@@ -292,7 +293,7 @@ function Home() {
                     {/* </section> */}
                 </div>
 
-                <div className='w-full h-[30vh] homePic lg:w-[40vw] lg:h-full flex items-center justify-center relative xl:top-7'>
+                <div className='z-10 w-full h-[30vh] homePic lg:w-[40vw] lg:h-full flex items-center justify-center relative xl:top-7'>
                     <div className=" hidden xl:inline">
                         <img src="/myDPRotated.jpg" alt="Sorry The Image is Not Available"
                             className="myImg" ref={myImgRef} />
@@ -321,6 +322,22 @@ function Home() {
                 <div className='absolute bottom-12 right-12 lg:hidden opacity-30'>
                     <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/7950F2/star--v1.png" alt="star--v1" />
                 </div> */}
+
+                <div className='absolute top-0 w-screen h-full'>
+                    <LightRays
+                        raysOrigin="top-center"
+                        raysColor="#ad33ea"
+                        raysSpeed={1.5}
+                        lightSpread={1.5}
+                        rayLength={3}
+                        followMouse={true}
+                        mouseInfluence={0.1}
+                        noiseAmount={0.1}
+                        distortion={0.05}
+                        saturation={1.5}
+                        className="custom-rays"
+                    />
+                </div>
             </div>
 
         </>
