@@ -51,19 +51,19 @@ function Footer() {
                         <h2 className="text-2xl applyFontBold text-gray-100">
                             Quick Links
                         </h2>
-                        <ol className="flex flex-col gap-2 text-[17px]">
-                            <a href="#home" className="hover:text-purple-500 ">Home</a>
+                        <ol className="flex flex-col gap-2 text-[17px] text-gray-300">
+                            <a href="#home" className="text-gray-300 ">Home</a>
                             <li>
-                                <a href="#about" className="hover:text-purple-500">About</a>
+                                <a href="#about" className="text-gray-300">About</a>
                             </li>
                             <li>
-                                <a href="#skills" className="hover:text-purple-500">Skills</a>
+                                <a href="#skills" className="text-gray-300">Skills</a>
                             </li>
                             <li>
-                                <a href="#projects" className="hover:text-purple-500">Projects</a>
+                                <a href="#projects" className="text-gray-300">Projects</a>
                             </li>
                             <li>
-                                <a href="#contactme" className="hover:text-purple-500">Contact Me</a>
+                                <a href="#contactme" className="text-gray-300">Contact Me</a>
                             </li>
                         </ol>
                     </div>
@@ -73,7 +73,7 @@ function Footer() {
                         <h3 className="text-2xl applyFontBold text-gray-900 dark:text-gray-100">
                             My Services
                         </h3>
-                        <ol className="flex flex-col gap-2 text-[17px]">
+                        <ol className="flex flex-col gap-2 text-[17px] text-gray-300">
                             <li>Frontend Development</li>
                             <li>Backend Development</li>
                             <li>FullStack Web Apps</li>
