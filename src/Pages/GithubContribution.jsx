@@ -1,6 +1,6 @@
 import React from "react";
-import ScaleWrapper from "../hooks/ScaleWrapper";
-import MotionWrapper from "../hooks/MotionWrapper";
+import ScaleWrapper from "../components/animations/ScaleWrapper";
+import MotionWrapper from "../components/animations/MotionWrapper";
 
 const GithubContribution = () => {
     return (

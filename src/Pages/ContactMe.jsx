@@ -6,7 +6,7 @@ import { toast } from "sonner";
 import Loader from "../components/Loader/Loader";
 import './ContactMe.css'
 import './Home.css'
-import MotionWrapper from "../hooks/MotionWrapper";
+import MotionWrapper from "../components/animations/MotionWrapper";
 
 function ContactMe() {
     const [isLoading, setIsLoading] = useState(false);

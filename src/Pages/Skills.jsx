@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import MotionWrapper from '../hooks/MotionWrapper';
+import MotionWrapper from '../components/animations/MotionWrapper';
 
 function Skills() {
   const frontendSkills = [

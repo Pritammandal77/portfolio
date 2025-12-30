@@ -15,9 +15,6 @@ function MainBody() {
       <section id="home">
         <Home />
       </section>
-      {/* <section id='about'>
-        <WobbleCard />
-      </section> */}
       <section id='about'>
         <About />
       </section>

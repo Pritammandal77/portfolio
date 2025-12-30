@@ -3,8 +3,7 @@ import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import MotionWrapper from '../hooks/MotionWrapper';
-import ScaleWrapper from '../hooks/ScaleWrapper';
+import ScaleWrapper from '../components/animations/ScaleWrapper';
 gsap.registerPlugin(ScrollTrigger);
 
 const projectsData = [
@@ -79,7 +78,6 @@ function Projects() {
             <h1 className="text-[40px] lg:text-[50px] font-semibold text-center mb-[60px] text-[#e7e7e7] russo-one-regular">My Projects</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-[100%] md:w-[90vw] xl:px-2 place-items-center">
                 {projectsData.map((project, index) => (
-                    // <MotionWrapper key={index} direction={project.direction}>
                     <ScaleWrapper key={index}>
 
                         <div
@@ -130,7 +128,6 @@ function Projects() {
                             </div>
                         </div>
                     </ScaleWrapper>
-                    // </MotionWrapper>
                 ))}
             </div>
 
