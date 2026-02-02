@@ -8,6 +8,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projectsData = [
     {
+        title: "Notexa",
+        description: "NOTEXA is a web platform that helps students access well-structured handwritten and digital academic notes. It features authentication, role-based access, a personal dashboard, admin panel, and affordable pricing.",
+        image: "notexa.png",
+        skills: ["Next.js", "Redux Toolkit", "Node.js", "Express.js", "MongoDB", "Razorpay"],
+        liveLink: "https://notexahub.vercel.app",
+        githubLink: "https://github.com/Pritammandal77/Notexa-frontend",
+        githubLink2: "https://github.com/Pritammandal77/Notexa-Backend",
+        direction: 'y'
+    },
+    {
         title: "devStackr",
         description: "It is an fullstack Social media platform for developers , where users can create an account & connect with other users , It includes features like , post creation , like & comment on posts , follow & unfollow users ,search users , edit profile , real time chat using socket.io",
         image: "devstackr.jpg",
@@ -44,15 +54,15 @@ const projectsData = [
         githubLink: "https://github.com/Pritammandal77/Zeno-AI",
         direction: 'y'
     },
-    {
-        title: "Recipe Gram",
-        description: "It is a recipe App ,User can browse diffferent types of recipes ,can Search Recipes ,view The full detailed recipe with its Ingredients . Also can save Favourite Recipes on localStorage & Delete Recipes.",
-        image: "https://imgs.search.brave.com/MlMyF6p_e6f8sCUB32EpZfxLX7WngSN8-5AX3SocTA8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNjI4/MDk1NjMyL3Bob3Rv/L3JlY2lwZS5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9M19q/Zm5zQTdTTTZxbW9h/bDJEV3lyeklLY25r/SHdkTXJodGpjS3Ni/QzZMYz0",
-        skills: ["React.js", "Vanila CSS", "Context API"],
-        liveLink: "https://recipe-gram.netlify.app/",
-        githubLink: "https://github.com/Pritammandal77/Recipe-App",
-        direction: 'y'
-    },
+    // {
+    //     title: "Recipe Gram",
+    //     description: "It is a recipe App ,User can browse diffferent types of recipes ,can Search Recipes ,view The full detailed recipe with its Ingredients . Also can save Favourite Recipes on localStorage & Delete Recipes.",
+    //     image: "https://imgs.search.brave.com/MlMyF6p_e6f8sCUB32EpZfxLX7WngSN8-5AX3SocTA8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNjI4/MDk1NjMyL3Bob3Rv/L3JlY2lwZS5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9M19q/Zm5zQTdTTTZxbW9h/bDJEV3lyeklLY25r/SHdkTXJodGpjS3Ni/QzZMYz0",
+    //     skills: ["React.js", "Vanila CSS", "Context API"],
+    //     liveLink: "https://recipe-gram.netlify.app/",
+    //     githubLink: "https://github.com/Pritammandal77/Recipe-App",
+    //     direction: 'y'
+    // },
     {
         title: "Club Website (GharPadharo)",
         description: "It is the club website of GharPadharo (Zestos Ventures Pvt. Ltd.) , As part of my internship at Gharpadharo. I individually built their club website, where they can showcase their upcoming events , image gallery , CTA button , etc",
