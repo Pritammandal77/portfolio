@@ -5,10 +5,7 @@ import Experience from '../../Pages/Experience';
 import Skills from '../../Pages/Skills';
 import Projects from '../../Pages/Projects';
 import ContactMe from '../../Pages/ContactMe';
-import { WobbleCard } from '../ui/WobbleCard';
 import GithubContribution from '../../Pages/GithubContribution';
-import AIChat from '../AIChat';
-
 
 function MainBody() {
   return (
@@ -16,9 +13,7 @@ function MainBody() {
       <section id="home">
         <Home />
       </section>
-      <section id="home">
-        <AIChat />
-      </section>
+    
       <section id='about'>
         <About />
       </section>

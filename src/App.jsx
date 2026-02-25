@@ -9,6 +9,7 @@ import About from './Pages/About.jsx'
 import { useEffect } from 'react'
 import Experience from './Pages/Experience.jsx'
 import ReactLenis from 'lenis/react'
+import AIChat from './components/RAG-AI/AIChat.jsx'
 
 function App() {
 
@@ -56,6 +57,7 @@ function App() {
         orientation: 'vertical'
        }}
       >
+        <AIChat/>
         <RouterProvider router={router} />
       </ReactLenis>
     </>

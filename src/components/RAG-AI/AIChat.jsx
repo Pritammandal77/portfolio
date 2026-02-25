@@ -10,10 +10,23 @@ export default function AIChat() {
 
     const bottomRef = useRef(null);
 
-    
+    // Auto scroll to latest message
     useEffect(() => {
         bottomRef.current?.scrollIntoView({ behavior: "smooth" });
     }, [chat, loading]);
+
+    // Disable background scroll when chat open
+    useEffect(() => {
+        if (open) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [open]);
 
     const send = async () => {
 
@@ -53,7 +66,7 @@ export default function AIChat() {
             {/* Floating Button */}
             <button
                 onClick={() => setOpen(!open)}
-                className="fixed bottom-6 right-6 bg-purple-600 hover:bg-purple-700 text-white px-5 py-3 rounded-full shadow-xl transition z-50"
+                className="fixed bottom-6 right-4 bg-[#9F4AEF] hover:bg-purple-700 text-white px-5 py-3 rounded-full shadow-xl transition z-50"
             >
                 Chat with PAI
             </button>
@@ -61,35 +74,37 @@ export default function AIChat() {
             {/* Chat Window */}
 
             {open && (
-                <div className="fixed bottom-24 right-6 w-[360px] h-[500px] xl:w-[400px] bg-[#0f0f0f] rounded-2xl shadow-2xl flex flex-col overflow-hidden z-100">
+                <div className="fixed bottom-24 right-6 w-[360px] h-[500px] xl:w-[400px] bg-[#0f0f0f] rounded-2xl shadow-2xl flex flex-col overflow-hidden z-[100]">
 
                     {/* Header */}
 
-                    <div className="bg-purple-600 text-white p-4 flex justify-between items-center font-semibold">
+                    <div className="bg-[#9735f1] text-white p-4 flex justify-between items-center font-semibold">
                         Pritam AI
                         <button onClick={() => setOpen(false)}>✕</button>
                     </div>
 
                     {/* Messages */}
 
-                    <div className="flex-1 overflow-y-auto p-4 space-y-4">
+                    <div className="flex-1 overflow-y-auto overscroll-y-contain p-4 flex flex-col gap-3">
 
                         {chat.length === 0 && (
-                            <p className="text-gray-400 text-sm">
-                                Ask anything about Pritam 👋
+                            <p className="text-gray-300 text-sm">
+                                Ask anything about Pritam
                             </p>
                         )}
 
                         {chat.map((c, i) => (
                             <div
                                 key={i}
-                                className={`flex ${c.role === "user" ? "justify-end" : "justify-start"
+                                className={`flex ${c.role === "user"
+                                    ? "justify-end"
+                                    : "justify-start"
                                     }`}
                             >
                                 <div
                                     className={`max-w-[75%] px-4 py-2 rounded-2xl text-sm ${c.role === "user"
-                                            ? "bg-purple-600 text-white rounded-br-sm"
-                                            : "bg-[#2a2a2a] text-gray-200 rounded-bl-sm"
+                                        ? "bg-purple-600 text-white rounded-br-sm"
+                                        : "bg-[#2a2a2a] text-gray-200 rounded-bl-sm"
                                         }`}
                                 >
                                     {c.text}
@@ -116,7 +131,7 @@ export default function AIChat() {
                             value={msg}
                             onChange={(e) => setMsg(e.target.value)}
                             placeholder="Ask something..."
-                            className="flex-1 px-3 py-2 outline-none text-sm bg-transparent text-white"
+                            className="flex-1 px-3 py-3 outline-none text-sm bg-transparent text-white"
                             onKeyDown={(e) => {
                                 if (e.key === "Enter") send();
                             }}
