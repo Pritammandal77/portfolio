@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { Toaster } from 'sonner'
+import AIChat from './components/AIChat.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -11,6 +12,7 @@ createRoot(document.getElementById('root')).render(
       theme="dark"
       duration={3000}
     />
+    <AIChat/>
     <App />
   </StrictMode>,
 )
