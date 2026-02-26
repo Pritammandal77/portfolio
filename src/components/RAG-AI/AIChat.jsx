@@ -269,12 +269,9 @@ export default function AIChat() {
         setLoading(true);
 
         try {
-
-            const res = await axios.post("http://localhost:8000/chat", {
+            const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/chat`, {
                 message: userMessage
             });
-
-            console.log(res)
 
             setChat(prev => [
                 ...prev,
@@ -362,7 +359,7 @@ export default function AIChat() {
                                                 h2: ({ children }) => <h2 className="text-md font-semibold mb-2">{children}</h2>,
                                                 p: ({ children }) => <p className="mb-2 leading-relaxed">{children}</p>,
                                                 strong: ({ children }) => <strong className="text-white">{children}</strong>,
-                                                
+
                                                 table: ({ children }) => (
                                                     <div className="space-y-1 my-2">{children}</div>
                                                 ),
