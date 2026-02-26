@@ -304,7 +304,7 @@ export default function AIChat() {
 
             {
                 open && (
-                    <div className="fixed bottom-24 px-3 md:px-0 md:right-6 w-full md:w-[360px] h-[500px] xl:w-[400px] bg-[#0f0f0f] rounded-2xl shadow-2xl flex flex-col overflow-hidden z-[100]"
+                    <div className="fixed bottom-0 md:bottom-24 px-3 md:px-0 md:right-6 w-full h-screen md:w-[360px] md:h-[500px] xl:w-[400px] bg-[#0f0f0f] rounded-2xl shadow-2xl flex flex-col overflow-hidden z-[100]"
                         onWheel={(e) => e.stopPropagation()}
                     >
 
