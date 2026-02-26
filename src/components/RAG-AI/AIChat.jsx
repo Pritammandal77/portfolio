@@ -44,6 +44,8 @@ export default function AIChat() {
                 message: userMessage
             });
 
+            console.log(res)
+
             setChat(prev => [
                 ...prev,
                 { role: "ai", text: res.data.reply }
@@ -75,7 +77,9 @@ export default function AIChat() {
 
             {
                 open && (
-                    <div className="fixed bottom-24 px-3 md:px-0 md:right-6 w-full md:w-[360px] h-[500px] xl:w-[400px] bg-[#0f0f0f] rounded-2xl shadow-2xl flex flex-col overflow-hidden z-[100]">
+                    <div className="fixed bottom-24 px-3 md:px-0 md:right-6 w-full md:w-[360px] h-[500px] xl:w-[400px] bg-[#0f0f0f] rounded-2xl shadow-2xl flex flex-col overflow-hidden z-[100]"
+                        onWheel={(e) => e.stopPropagation()}
+                    >
 
                         {/* Header */}
 
@@ -115,9 +119,9 @@ export default function AIChat() {
                                         }`}
                                 >
                                     <div
-                                        className={`max-w-[75%] px-4 py-2 rounded-2xl text-sm ${c.role === "user"
-                                            ? "bg-purple-600 text-white rounded-br-sm"
-                                            : "bg-[#2a2a2a] text-gray-200 rounded-bl-sm"
+                                        className={`max-w-[75%] px-4 py-2 rounded-2xl text-sm whitespace-pre-line ${c.role === "user"
+                                                ? "bg-purple-600 text-white rounded-br-sm"
+                                                : "bg-[#2a2a2a] text-gray-200 rounded-bl-sm"
                                             }`}
                                     >
                                         {c.text}
