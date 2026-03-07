@@ -67,201 +67,202 @@ export default function AIChat() {
 
             {/* Chat Window */}
 
-            {open && (
-
-                <div
-                    className={`
-                    fixed z-50 flex flex-col bg-[#0f0f0f]
-                    ${fullscreen
-                            ? "w-full h-full right-0 bottom-0 rounded-none"
-                            : "bottom-6 right-6 w-[360px] h-[500px] rounded-2xl shadow-2xl"
-                        }
-                    `}
-                    onWheel={(e) => e.stopPropagation()}
-                >
-
-                    {/* Header */}
+            {
+                open && (
 
                     <div
-                        className={`bg-purple-600 text-white p-4 flex justify-between items-center text-[18px]
-                        ${fullscreen ? "px-50" : "rounded-t-2xl"}`}
+                        className={`
+                    fixed z-50 flex flex-col bg-[#0f0f0f]
+                    ${fullscreen
+                                ? "w-full h-full right-0 bottom-0 rounded-none"
+                                : "bottom-6 right-6 w-[360px] h-[500px] rounded-2xl shadow-2xl"
+                            }
+                    `}
+                        onWheel={(e) => e.stopPropagation()}
                     >
 
-                        <h2 className="font-bold">Pritam AI</h2>
+                        {/* Header */}
 
-                        <div className="flex gap-5">
+                        <div
+                            className={`bg-purple-600 text-white p-3 xl:p-4 flex justify-between items-center text-[18px]
+                        ${fullscreen ? "xl:px-50" : "rounded-t-2xl"}`}
+                        >
+
+                            <h2 className="font-bold">Pritam AI</h2>
+
+                            <div className="flex gap-5">
+
+                                <button
+                                    onClick={() => setFullscreen(!fullscreen)}
+                                    className="cursor-pointer"
+                                >
+                                    {fullscreen
+                                        ? <Minimize size={22} />
+                                        : <Scan size={22} />}
+                                </button>
+
+                                <button
+                                    onClick={() => setOpen(false)}
+                                    className="cursor-pointer"
+                                >
+                                    <X size={22} />
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        {/* Messages */}
+
+                        <div className={`flex-1 overflow-y-auto p-4 flex flex-col gap-3  ${fullscreen && "xl:px-50"}`}>
+
+                            {chat.length === 0 && (
+
+                                <div className="flex flex-col items-center justify-center text-center w-full h-full px-6">
+
+                                    <h1 className="text-white text-lg font-semibold">
+                                        Hello! I'm Pritam's AI Assistant
+                                    </h1>
+
+                                    <p className="text-gray-400 text-sm mt-2">
+                                        Ask me anything about Pritam - from his projects and skills to his professional experience.
+                                    </p>
+
+                                </div>
+
+                            )}
+
+                            {chat.map((c, i) => (
+
+                                <div
+                                    key={i}
+                                    className={`flex ${c.role === "user"
+                                        ? "justify-end"
+                                        : "justify-start"
+                                        }`}
+                                >
+
+                                    <div
+                                        className={`px-3 py-2 rounded-2xl text-sm whitespace-pre-line max-w-[80%]
+                                    ${c.role === "user"
+                                                ? "bg-purple-600 text-white rounded-br-sm"
+                                                : "bg-[#2a2a2a] text-gray-200 rounded-bl-sm"
+                                            }`}
+                                    >
+
+                                        <ReactMarkdown
+                                            remarkPlugins={[remarkGfm]}
+                                            components={{
+
+                                                code({ inline, className, children }) {
+
+                                                    const match = /language-(\w+)/.exec(className || "");
+                                                    const code = String(children).replace(/\n$/, "");
+
+                                                    if (!inline && match) {
+
+                                                        return (
+
+                                                            <div className="my-4 rounded-xl overflow-hidden border border-zinc-700 bg-[#0d1117]">
+
+                                                                <div className="flex justify-between items-center px-3 py-2 bg-[#161b22] text-xs text-gray-400 border-b border-zinc-700">
+
+                                                                    <span>{match[1]}</span>
+
+                                                                    <button
+                                                                        onClick={() => {
+                                                                            navigator.clipboard.writeText(code);
+                                                                            setCopiedIndex(code);
+                                                                            setTimeout(() => setCopiedIndex(null), 2000);
+                                                                        }}
+                                                                        className="flex items-center gap-1 hover:text-white"
+                                                                    >
+                                                                        {copiedIndex === code
+                                                                            ? <Check size={14} />
+                                                                            : <Copy size={14} />}
+                                                                    </button>
+
+                                                                </div>
+
+                                                                <div className="overflow-x-auto">
+
+                                                                    <SyntaxHighlighter
+                                                                        style={vscDarkPlus}
+                                                                        language={match[1]}
+                                                                        PreTag="div"
+                                                                        customStyle={{
+                                                                            margin: 0,
+                                                                            background: "#0d1117",
+                                                                            padding: "16px",
+                                                                            fontSize: "13px"
+                                                                        }}
+                                                                    >
+                                                                        {code}
+                                                                    </SyntaxHighlighter>
+
+                                                                </div>
+
+                                                            </div>
+
+                                                        );
+                                                    }
+
+                                                    return (
+                                                        <code className="px-1 py-0.5 rounded text-xs">
+                                                            {children}
+                                                        </code>
+                                                    );
+                                                }
+
+                                            }}
+                                        >
+                                            {c.text}
+                                        </ReactMarkdown>
+
+                                    </div>
+
+                                </div>
+
+                            ))}
+
+                            {loading && (
+                                <div className="flex justify-start">
+                                    <div className="bg-[#2a2a2a] text-gray-300 px-4 py-2 rounded-2xl text-sm">
+                                        Thinking...
+                                    </div>
+                                </div>
+                            )}
+
+                            <div ref={bottomRef} />
+
+                        </div>
+
+                        {/* Input */}
+
+                        <div className={`p-3 border-t border-gray-800 flex gap-2 bg-[#1a1a1a] ${fullscreen && "xl:px-50"}`}>
+
+                            <input
+                                value={msg}
+                                onChange={(e) => setMsg(e.target.value)}
+                                placeholder="Ask something..."
+                                className="flex-1 bg-[#0f0f0f] border border-gray-700 rounded-lg px-3 py-2 text-sm text-white outline-none"
+                                onKeyDown={(e) => {
+                                    if (e.key === "Enter") send();
+                                }}
+                            />
 
                             <button
-                                onClick={() => setFullscreen(!fullscreen)}
-                                className="cursor-pointer"
+                                onClick={send}
+                                className="bg-purple-600 hover:bg-purple-700 text-white px-4 rounded-lg"
                             >
-                                {fullscreen
-                                    ? <Minimize size={22} />
-                                    : <Scan size={22} />}
-                            </button>
-
-                            <button
-                                onClick={() => setOpen(false)}
-                                className="cursor-pointer"
-                            >
-                                <X size={22} />
+                                Send
                             </button>
 
                         </div>
 
                     </div>
 
-                    {/* Messages */}
-
-                    <div className={`flex-1 overflow-y-auto p-4 flex flex-col gap-3  ${fullscreen && "xl:px-50"}`}>
-
-                        {chat.length === 0 && (
-
-                            <div className="flex flex-col items-center justify-center text-center w-full h-full px-6">
-
-                                <h1 className="text-white text-lg font-semibold">
-                                    Hello! I'm Pritam's AI Assistant
-                                </h1>
-
-                                <p className="text-gray-400 text-sm mt-2">
-                                    Ask me anything about Pritam - from his projects and skills to his professional experience.
-                                </p>
-
-                            </div>
-
-                        )}
-
-                        {chat.map((c, i) => (
-
-                            <div
-                                key={i}
-                                className={`flex ${c.role === "user"
-                                        ? "justify-end"
-                                        : "justify-start"
-                                    }`}
-                            >
-
-                                <div
-                                    className={`px-3 py-2 rounded-2xl text-sm whitespace-pre-line max-w-[80%]
-                                    ${c.role === "user"
-                                            ? "bg-purple-600 text-white rounded-br-sm"
-                                            : "bg-[#2a2a2a] text-gray-200 rounded-bl-sm"
-                                        }`}
-                                >
-
-                                    <ReactMarkdown
-                                        remarkPlugins={[remarkGfm]}
-                                        components={{
-
-                                            code({ inline, className, children }) {
-
-                                                const match = /language-(\w+)/.exec(className || "");
-                                                const code = String(children).replace(/\n$/, "");
-
-                                                if (!inline && match) {
-
-                                                    return (
-
-                                                        <div className="my-4 rounded-xl overflow-hidden border border-zinc-700 bg-[#0d1117]">
-
-                                                            <div className="flex justify-between items-center px-3 py-2 bg-[#161b22] text-xs text-gray-400 border-b border-zinc-700">
-
-                                                                <span>{match[1]}</span>
-
-                                                                <button
-                                                                    onClick={() => {
-                                                                        navigator.clipboard.writeText(code);
-                                                                        setCopiedIndex(code);
-                                                                        setTimeout(() => setCopiedIndex(null), 2000);
-                                                                    }}
-                                                                    className="flex items-center gap-1 hover:text-white"
-                                                                >
-                                                                    {copiedIndex === code
-                                                                        ? <Check size={14} />
-                                                                        : <Copy size={14} />}
-                                                                </button>
-
-                                                            </div>
-
-                                                            <div className="overflow-x-auto">
-
-                                                                <SyntaxHighlighter
-                                                                    style={vscDarkPlus}
-                                                                    language={match[1]}
-                                                                    PreTag="div"
-                                                                    customStyle={{
-                                                                        margin: 0,
-                                                                        background: "#0d1117",
-                                                                        padding: "16px",
-                                                                        fontSize: "13px"
-                                                                    }}
-                                                                >
-                                                                    {code}
-                                                                </SyntaxHighlighter>
-
-                                                            </div>
-
-                                                        </div>
-
-                                                    );
-                                                }
-
-                                                return (
-                                                    <code className="px-1 py-0.5 rounded text-xs">
-                                                        {children}
-                                                    </code>
-                                                );
-                                            }
-
-                                        }}
-                                    >
-                                        {c.text}
-                                    </ReactMarkdown>
-
-                                </div>
-
-                            </div>
-
-                        ))}
-
-                        {loading && (
-                            <div className="flex justify-start">
-                                <div className="bg-[#2a2a2a] text-gray-300 px-4 py-2 rounded-2xl text-sm">
-                                    Thinking...
-                                </div>
-                            </div>
-                        )}
-
-                        <div ref={bottomRef} />
-
-                    </div>
-
-                    {/* Input */}
-
-                    <div className={`p-3 border-t border-gray-800 flex gap-2 bg-[#1a1a1a] ${fullscreen && "xl:px-50"}`}>
-
-                        <input
-                            value={msg}
-                            onChange={(e) => setMsg(e.target.value)}
-                            placeholder="Ask something..."
-                            className="flex-1 bg-[#0f0f0f] border border-gray-700 rounded-lg px-3 py-2 text-sm text-white outline-none"
-                            onKeyDown={(e) => {
-                                if (e.key === "Enter") send();
-                            }}
-                        />
-
-                        <button
-                            onClick={send}
-                            className="bg-purple-600 hover:bg-purple-700 text-white px-4 rounded-lg"
-                        >
-                            Send
-                        </button>
-
-                    </div>
-
-                </div>
-
-            )}
+                )}
         </>
     );
 }
